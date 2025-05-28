@@ -14,9 +14,12 @@
         --color-hero:#FDFAEE;
         --color-green:#14967F;
         --color-footer-blue : #095d7e;
+        --color-yellow: #FFF0BB66;
       }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -102,7 +105,8 @@
                             <input type="text" placeholder="Clinic, Hospital..."
                                 class="w-full px-4 py-2 outline-none text-lg">
                         </div>
-                        <div class="bg-green col-span-1 flex items-center cursor-pointer justify-center font-bold p-4 text-white">
+                        <div
+                            class="bg-green col-span-1 flex items-center cursor-pointer justify-center font-bold p-4 text-white">
                             <img src="./assets/images/search.svg" alt="">
                         </div>
                     </div>
@@ -120,13 +124,485 @@
                 <h2 class="text-2xl font-semibold">Book Lab Appointment</h2>
                 <p class="text-lg">Need a lab test? Book your appointment at your preferred time and skip the wait. <br>
                     Fast, friendly, and reliable service guaranteed.</p>
-               
+
             </div>
             <div class="appointment-image flex justify-center items-center col-span-2">
                 <a href="#" class="border-2 border-white px-14 py-4 text-2xl rounded">Book a Date</a>
             </div>
         </div>
 
+    </section>
+    <!-- doctor section -->
+    <section class="doctor py-10 px-24 flex flex-col gap-y-6">
+        <div class="title flex flex-col gap-y-2">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-semibold">Top-rated primary care doctors <span
+                        class="bg-footer-blue ml-2 px-6 py-2 rounded-3xl text-white text-sm">Sponsored</span></h2>
+                <a href="#" class="underline text-primary-text font-semibold">See all (300+)</a>
+            </div>
+            <p class="text-primary-text">Connect with the most recommended primary care doctors – chosen for their
+                experience, reliability, and patient satisfaction.</p>
+        </div>
+        <div class="doctor-card grid grid-cols-3 gap-4">
+            <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
+                <div class="flex gap-4">
+                    <div class="image relative">
+                        <img src="./assets/images/doctor.png" alt="doctor" class="w-24 h-24 rounded-full object-cover">
+                        <div class="absolute right-0 bottom-0">
+                            <img src="./assets/images/video.svg" alt="video call">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-base font-bold">Dr. Hankyu Chung, MD</h3>
+                        <p class="font-semibold text-sm">Primary Care Doctor</p>
+                        <div class="flex mt-1 items-center gap-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8cc30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p>5.00 • 5 reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="text-primary-text flex items-center gap-x-1 font-medium"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                        <path fill-rule="evenodd"
+                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Lakeside, Pokhara
+                </h5>
+
+                <div class="flex flex-wrap gap-x-4 text-primary-text">
+                    <p>&#8226;New patient appointments</p>
+                    <p>&#8226;Excellent wait time</p>
+                    <p>&#8226;Highly recommended</p>
+                </div>
+                <div class="flex flex-col gap-y-1">
+                    <p>Next Available: May 14 at 7:00 AM</p>
+                    <a href="#"
+                        class="bg-green text-white px-6 py-2 rounded text-center font-semibold text-lg hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
+                <div class="flex gap-4">
+                    <div class="image relative">
+                        <img src="./assets/images/doctor.png" alt="doctor" class="w-24 h-24 rounded-full object-cover">
+                        <div class="absolute right-0 bottom-0">
+                            <img src="./assets/images/video.svg" alt="video call">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-base font-bold">Dr. Hankyu Chung, MD</h3>
+                        <p class="font-semibold text-sm">Primary Care Doctor</p>
+                        <div class="flex mt-1 items-center gap-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8cc30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p>5.00 • 5 reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="text-primary-text flex items-center gap-x-1 font-medium"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                        <path fill-rule="evenodd"
+                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Lakeside, Pokhara
+                </h5>
+
+                <div class="flex flex-wrap gap-x-4 text-primary-text">
+                    <p>&#8226;New patient appointments</p>
+                    <p>&#8226;Excellent wait time</p>
+                    <p>&#8226;Highly recommended</p>
+                </div>
+                <div class="flex flex-col gap-y-1">
+                    <p>Next Available: May 14 at 7:00 AM</p>
+                    <a href="#"
+                        class="bg-green text-white px-6 py-2 rounded text-center font-semibold text-lg hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
+                <div class="flex gap-4">
+                    <div class="image relative">
+                        <img src="./assets/images/doctor.png" alt="doctor" class="w-24 h-24 rounded-full object-cover">
+                        <div class="absolute right-0 bottom-0">
+                            <img src="./assets/images/video.svg" alt="video call">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-base font-bold">Dr. Hankyu Chung, MD</h3>
+                        <p class="font-semibold text-sm">Primary Care Doctor</p>
+                        <div class="flex mt-1 items-center gap-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8cc30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p>5.00 • 5 reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="text-primary-text flex items-center gap-x-1 font-medium"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                        <path fill-rule="evenodd"
+                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Lakeside, Pokhara
+                </h5>
+
+                <div class="flex flex-wrap gap-x-4 text-primary-text">
+                    <p>&#8226;New patient appointments</p>
+                    <p>&#8226;Excellent wait time</p>
+                    <p>&#8226;Highly recommended</p>
+                </div>
+                <div class="flex flex-col gap-y-1">
+                    <p>Next Available: May 14 at 7:00 AM</p>
+                    <a href="#"
+                        class="bg-green text-white px-6 py-2 rounded text-center font-semibold text-lg hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- clinic section -->
+    <section class="clinic py-10 px-24 flex flex-col gap-y-6">
+        <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-semibold">Find a health clinic or hospital from over 1,000 options <span
+                    class="bg-footer-blue ml-2 px-6 py-2 rounded-3xl text-white text-sm">Sponsored</span></h2>
+            <a href="#" class="underline text-primary-text font-semibold">See all (100+)</a>
+        </div>
+        <div class="doctor-card grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
+                <img src="./assets/images/image-4.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
+            </div>
+            <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
+                <img src="./assets/images/image-1.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
+            </div>
+            <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
+                <img src="./assets/images/image-2.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
+            </div>
+            <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
+                <img src="./assets/images/image-3.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
+            </div>
+            <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
+                <img src="./assets/images/image-4.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
+            </div>
+            <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
+                <img src="./assets/images/image-1.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
+            </div>
+            <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
+                <img src="./assets/images/image-2.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
+            </div>
+        </div>
+    </section>
+    <!-- diagnostic section -->
+    <section class="diagnostic py-10 px-24 flex flex-col gap-y-6">
+        <div class="title flex flex-col gap-y-2">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-semibold">Choose a diagnostic lab from 1,000+ test services<span
+                        class="bg-footer-blue ml-2 px-6 py-2 rounded-3xl text-white text-sm">Sponsored</span></h2>
+                <a href="#" class="underline text-primary-text font-semibold">See all (100+)</a>
+            </div>
+            <p class="text-primary-text">Find certified diagnostic labs from over 1,000 trusted options, making it easy
+                to access reliable testing near you.</p>
+        </div>
+        <div class="clinic-card grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- radiology section -->
+    <section class="radiology py-10 px-24 flex flex-col gap-y-6">
+        <div class="title flex flex-col gap-y-2">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-semibold">Find a Radiology Center from Over 50 Verified Options<span
+                        class="bg-footer-blue ml-2 px-6 py-2 rounded-3xl text-white text-sm">Sponsored</span></h2>
+                <a href="#" class="underline text-primary-text font-semibold">See all (100+)</a>
+            </div>
+            <p class="text-primary-text">Easily locate trusted radiology centers from a network of over 1,000 verified
+                options, ensuring precise imaging wherever you are.</p>
+        </div>
+        <div class="clinic-card grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- symptoms section -->
+    <section class="symptoms py-10 px-24 flex flex-col gap-y-6">
+        <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-semibold">Check your symptoms and get care right away.</h2>
+            <a href="#" class="underline text-primary-text font-semibold">See all (100+)</a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div
+                class="card bg-[#CAEDE7] rounded-lg p-6 flex flex-col gap-y-2 items-center justify-center cursor-pointer">
+                <div class="bg-white p-6 rounded-full">
+                    <img src="./assets/images/tooth.svg" alt="tooth" class="size-12">
+                </div>
+                <h5 class="text-lg font-semibold">Toothache</h5>
+            </div>
+            <div
+                class="card bg-[#CAEDE7] rounded-lg p-6 flex flex-col gap-y-2 items-center justify-center cursor-pointer">
+                <div class="bg-white p-6 rounded-full">
+                    <img src="./assets/images/tooth.svg" alt="tooth" class="size-12">
+                </div>
+                <h5 class="text-lg font-semibold">Toothache</h5>
+            </div>
+            <div
+                class="card bg-[#CAEDE7] rounded-lg p-6 flex flex-col gap-y-2 items-center justify-center cursor-pointer">
+                <div class="bg-white p-6 rounded-full">
+                    <img src="./assets/images/tooth.svg" alt="tooth" class="size-12">
+                </div>
+                <h5 class="text-lg font-semibold">Toothache</h5>
+            </div>
+            <div
+                class="card bg-[#CAEDE7] rounded-lg p-6 flex flex-col gap-y-2 items-center justify-center cursor-pointer">
+                <div class="bg-white p-6 rounded-full">
+                    <img src="./assets/images/tooth.svg" alt="tooth" class="size-12">
+                </div>
+                <h5 class="text-lg font-semibold">Toothache</h5>
+            </div>
+            <div
+                class="card bg-[#CAEDE7] rounded-lg p-6 flex flex-col gap-y-2 items-center justify-center cursor-pointer">
+                <div class="bg-white p-6 rounded-full">
+                    <img src="./assets/images/tooth.svg" alt="tooth" class="size-12">
+                </div>
+                <h5 class="text-lg font-semibold">Toothache</h5>
+            </div>
+            <div
+                class="card bg-[#CAEDE7] rounded-lg p-6 flex flex-col gap-y-2 items-center justify-center cursor-pointer">
+                <div class="bg-white p-6 rounded-full">
+                    <img src="./assets/images/tooth.svg" alt="tooth" class="size-12">
+                </div>
+                <h5 class="text-lg font-semibold">Toothache</h5>
+            </div>
+        </div>
+    </section>
+    <!-- hospital appointment section -->
+    <section class="appointment py-10 px-24 flex flex-col gap-y-6 bg-[#e8f3f1]">
+        <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-semibold">Book Hospital Appointment</h2>
+            <a href="#" class="underline text-primary-text font-semibold">See all (100+)</a>
+        </div>
+         <div class="clinic-card grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+            <div class="card flex flex-col group bg-white rounded-b-md">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group bg-white rounded-b-md">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group bg-white rounded-b-md">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+            <div class="card flex flex-col group bg-white rounded-b-md">
+                <div class="relative overflow-hidden w-full cursor-pointer">
+                    <img src="./assets/images/clinic.png"
+                        class="w-full h-42 object-cover rounded-t-md  transition-transform duration-300 ease-in-out group-hover:scale-125"
+                        alt="Clinic">
+                </div>
+                <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
+                    <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
+                    <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
+                    <a href="#"
+                        class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-white border border-green hover:text-green transition duration-300">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section -->
+    <section class="bg-yellow flex flex-col gap-y-6 py-16 px-24">
+        <div class="flex flex-col items-center">
+            <p class="text-primary-text">Know More About</p>
+            <img src="./assets/images/Logo.png" alt="logo" class="w-84">
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 43.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 42.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 41.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+        </div>
     </section>
     <!-- footer section -->
     <section class="footer px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
@@ -173,7 +649,10 @@
                 </div>
             </div>
         </div>
-        <p class="text-xs text-white leading-5">The content provided here and elsewhere on the Zocdoc site or mobile app is provided for general informational purposes only. It is not intended as, and Zocdoc does not provide, medical advice, diagnosis or treatment. Always contact your healthcare provider directly with any questions you may have regarding your health or specific medical advice.</p>
+        <p class="text-xs text-white leading-5">The content provided here and elsewhere on the Zocdoc site or mobile app
+            is provided for general informational purposes only. It is not intended as, and Zocdoc does not provide,
+            medical advice, diagnosis or treatment. Always contact your healthcare provider directly with any questions
+            you may have regarding your health or specific medical advice.</p>
     </section>
     <!-- mid footer section -->
     <section class="mid-footer px-24 bg-black text-white py-10">
@@ -183,20 +662,25 @@
                 <div class="flex gap-4 text-sm text-stone-400">
                     <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Terms</a>
                     <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Privacy</a>
-                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Consumer Health</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Consumer
+                        Health</a>
                     <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Site Map</a>
                 </div>
             </div>
             <div class="social-icons flex items-center gap-6 text-xl text-stone-400">
-                <a href="#"><i class="fa-brands fa-facebook transition-all duration-200 hover:ease-in hover:text-white"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram transition-all duration-200 hover:ease-in hover:text-white"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-facebook transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-instagram transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-linkedin transition-all duration-200 hover:ease-in hover:text-white"></i></a>
             </div>
         </div>
     </section>
     <!-- bottom footer section -->
     <section class="bottom-footer p-6 flex justify-end">
-        <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
+        <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
+                src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
     </section>
 </body>
 
