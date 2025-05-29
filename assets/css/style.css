@@ -3,3 +3,11 @@ body{
     font-family: "Inter", sans-serif;
 }
 
+
+
+
+@media (max-width:1200px) {
+    .search-bar{
+        display: none;
+    }
+}

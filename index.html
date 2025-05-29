@@ -17,6 +17,14 @@
         --color-yellow: #FFF0BB66;
       }
     </style>
+     <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,10 +36,10 @@
         <p>Get 50% on your first subscription <a href="#" class="font-bold">Click Here</a></p>
     </header>
     <!-- hero section -->
-    <section class="hero bg-hero px-24">
+    <section class="hero bg-hero px-8 md:px-14 xl:px-24 pt-6">
         <nav class="flex justify-between items-center">
             <img src="./assets/images/logo.png" alt="logo" class="w-48">
-            <ul class="flex space-x-10 text-lg py-6 text-[1rem] font-semibold">
+            <ul class="hidden lg:flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
                 <li><a href="#" class="text-primary-text">Request a Call Back</a></li>
                 <li class="relative group">
                     <a href="#" class="flex items-center gap-1 text-primary-text">Find Doctors
@@ -50,20 +58,20 @@
             </ul>
         </nav>
         <div class="hero-section relative">
-            <div class="grid grid-cols-2 gap-10 z-10">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 z-10">
                 <div class="hero-text flex flex-col gap-4 mt-12">
                     <div class="bg-white px-6 py-2 w-fit rounded-3xl shadow-lg">
                         <h5 class="font-semibold">#1 Best Online Medical in Nepal</h5>
                     </div>
-                    <h1 class="text-5xl font-semibold text-primary-text tracking-wide leading-14">Bringing Quality <br>
+                    <h1 class="text-4xl xl:text-5xl font-semibold text-primary-text tracking-wide leading-12 xl:leading-14">Bringing Quality <br>
                         Healthcare Services <br>
                         <span class="flex gap-x-4 items-center">to You!<img src="./assets/images/hero-logo.svg"
                                 alt=""></span>
                     </h1>
-                    <p class="text-lg text-primary-text text-md">Delivering comprehensive your health support through
+                    <p class="text-base xl:text-lg text-primary-text leading-6">Delivering comprehensive your health support through
                         our innovative
                         platform that seamlessly connects with doctors and healthcare centres.</p>
-                    <div class="flex gap-4 mt-6">
+                    <div class="flex gap-4 mt-2 xl:mt-4">
                         <a href="#"
                             class="bg-white text-black px-6 py-2 rounded-full text-lg border border-black hover:bg-primary hover:text-white transition duration-300">Find
                             Doctors</a>
@@ -76,7 +84,7 @@
                     <img src="./assets/images/hero-image.png" alt="Doctor" class="w-full max-w-[37.2rem] object-cover">
                 </div>
             </div>
-            <div class="w-full absolute z-20 bottom-12 left-0 mx-auto">
+            <div class="search-bar w-full absolute z-20 bottom-12 left-0 mx-auto">
                 <div class="relative">
                     <div class="border-2 border-black grid grid-cols-13 rounded overflow-hidden ">
                         <div class="bg-white border-r border-gray-300 col-span-4 flex items-center justify-center px-4">
@@ -143,7 +151,7 @@
             <p class="text-primary-text">Connect with the most recommended primary care doctors – chosen for their
                 experience, reliability, and patient satisfaction.</p>
         </div>
-        <div class="doctor-card grid grid-cols-3 gap-4">
+        <div class="owl-carousel doctor-carousel">
             <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
                 <div class="flex gap-4">
                     <div class="image relative">
@@ -605,13 +613,13 @@
         </div>
     </section>
     <!-- footer section -->
-    <section class="footer px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
-        <div class="grid grid-cols-4 gap-14">
+    <section class="footer px-6 md:px-14 xl:px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-14">
             <div class="flex flex-col gap-6">
                 <a href="/">
                     <h1 class="text-white text-4xl">Doctor <span class="text-orange-400 font-bold">X</span></h1>
                 </a>
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-row md:flex-col gap-4 text-sm md:text-base">
                     <a href="#">Home</a>
                     <a href="#">About Us</a>
                     <a href="#">Career</a>
@@ -655,16 +663,16 @@
             you may have regarding your health or specific medical advice.</p>
     </section>
     <!-- mid footer section -->
-    <section class="mid-footer px-24 bg-black text-white py-10">
-        <div class="flex items-center justify-between">
-            <div class="flex gap-4 items-center">
+    <section class="mid-footer px-8 md:px-14 xl:px-24 bg-black text-white py-10">
+        <div class="flex flex-col md:flex-row items-start gap-4 md:gap-0 md:items-center justify-between">
+            <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
                 <p class="font-semibold">© 2025 DoctorX Private Limited</p>
                 <div class="flex gap-4 text-sm text-stone-400">
-                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Terms</a>
-                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Privacy</a>
-                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Consumer
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Terms</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Privacy</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Consumer
                         Health</a>
-                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-white mx-2">Site Map</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Site Map</a>
                 </div>
             </div>
             <div class="social-icons flex items-center gap-6 text-xl text-stone-400">
@@ -682,6 +690,7 @@
         <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
                 src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
     </section>
+    <script src="./assets/js/slider.js"></script>
 </body>
 
 </html>
