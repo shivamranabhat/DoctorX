@@ -5,9 +5,27 @@ body{
 
 
 
+@media (min-width:1028px) and (max-width:1310px) {
+    .search-bar{
+       bottom:-1rem;
+    }
+   
+}
 
-@media (max-width:1200px) {
+@media (max-width:967px) {
+    .hero-image img{
+        display: none;
+    }
     .search-bar{
         display: none;
+    }
+    .sm-search-bar{
+        display: block;
+    }
+    .search-container{
+        position: static;
+    }
+    .hero-section{
+        padding-bottom: 1.5rem;
     }
 }

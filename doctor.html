@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor X</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-primary: #095D7E;
+        --color-primary-text:#333333;
+        --color-hero:#FDFAEE;
+        --color-green:#14967F;
+        --color-footer-blue : #095d7e;
+        --color-yellow: #FFF0BB66;
+      }
+    </style>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="bg-primary text-white p-3 flex items-center justify-center">
+        <p>Get 50% on your first subscription <a href="#" class="font-bold">Click Here</a></p>
+    </header>
+    <!-- hero section -->
+    <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
+        <nav class="flex justify-between items-center">
+            <div class="flex">
+                <button class="inline md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#E67C40" class="size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
+                </button>
+                <img src="./assets/images/logo.png" alt="logo" class="w-48">
+            </div>
+            <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
+                <li class="relative group hidden lg:inline">
+                    <a href="#" class="flex items-center gap-1 text-primary-text">Find Doctors
+                        <img src="./assets/images/chevron.svg" alt="chevron">
+                    </a>
+                    <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 1</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 2</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 3</a></li>
+                    </ul>
+                </li>
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Diagnostic Lab</a></li>
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Hospitals</a></li>
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Radiology</a></li>
+                <li class="relative group">
+                    <a href="#" class="flex items-center gap-1 text-primary-text">Login
+                        <img src="./assets/images/chevron.svg" alt="chevron">
+                    </a>
+                    <ul
+                        class="absolute left-[-2rem] mt-1 w-48 p-4 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
+                        <div class="border-b border-gray-400 flex flex-col gap-2 pb-2">
+                            <h5 class="text-lg text-gray-700 font-normal">Patients</h5>
+                            <li><a href="#" class="block font-normal text-gray-600 py-2 hover:bg-gray-100">Log
+                                    in</a></li>
+                        </div>
+                        <div class="flex flex-col gap-2 pb-2">
+                            <h5 class="text-lg text-gray-700 font-normal">Doctors</h5>
+                            <li><a href="#" class="block font-normal py-2 text-gray-600 hover:bg-gray-100">Log in</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="hero-section flex flex-col justify-start md:justify-center gap-12 md:gap-16 relative mt-10 md:mt-0 h-[60vh] md:h-[80vh]">
+            <div class="flex flex-col gap-4 items-start md:items-center w-full md:w-[75%] mx-auto">
+                <h1
+                    class="text-justify md:text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-primary-text tracking-normal lg:tracking-wide leading-8 md:leading-10 lg:leading-12 xl:leading-14">
+                    Book Appointments with 100+ Top-Rated and Verified Doctors Near You
+                </h1>
+                <p class="text-base xl:text-lg text-primary-text leading-6 text-justify md:text-center">Need to see a doctor this week? Find trusted
+                    providers near you and book your appointment in minutes.
+                    It’s simple, secure, and free.</p>
+            </div>
+           <div class="w-full search-container absolute z-20 bottom-12 left-0 mx-auto">
+                <div class="search-bar relative">
+                    <div class="border-2 border-black grid grid-cols-13 rounded overflow-hidden">
+                        <div class="bg-white border-r border-gray-300 col-span-4 flex items-center justify-center px-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+
+                            <input type="text" placeholder="Condition, procedure, doctor..."
+                                class="w-full px-4 py-2 outline-none text-lg">
+                        </div>
+                        <div class="bg-white border-r border-gray-300 col-span-4 flex items-center justify-center px-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333333" class="size-6">
+                                <path fill-rule="evenodd"
+                                    d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            <input type="text" placeholder="Location" class="w-full px-4 py-2 outline-none text-lg">
+                        </div>
+                        <div class="bg-white border-r border-gray-300 col-span-4 flex items-center justify-center px-4">
+                            <img src="./assets/images/clinic.svg" alt="Clinic" class="size-6">
+
+                            <input type="text" placeholder="Clinic, Hospital..."
+                                class="w-full px-4 py-2 outline-none text-lg">
+                        </div>
+                        <div
+                            class="bg-green col-span-1 flex items-center cursor-pointer justify-center font-bold p-4 text-white">
+                            <img src="./assets/images/search.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="absolute right-[-2rem] top-[-2rem] z-30">
+                        <img src="./assets/images/decor.svg" alt="Decor" />
+                    </div>
+                </div>
+                <div class="sm-search-bar hidden border-2 border-black rounded-xl bg-white flex flex-col gap-2 p-4">
+                    <div class="flex items-center justify-center py-2 px-4 border-b border-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+
+                        <input type="text" placeholder="Condition, procedure, doctor..."
+                            class="w-full px-4 py-2 outline-none text-sm">
+                    </div>
+                    <div class="flex items-center justify-center py-2 px-4 border-b border-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333333" class="size-6">
+                            <path fill-rule="evenodd"
+                                d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                        <input type="text" placeholder="Location" class="w-full px-4 py-2 outline-none text-sm">
+                    </div>
+                    <div class="flex items-center justify-center px-4 border-b border-gray-300 py-2">
+                        <img src="./assets/images/clinic.svg" alt="Clinic" class="size-6">
+
+                        <input type="text" placeholder="Clinic, Hospital..."
+                            class="w-full px-4 py-2 outline-none text-sm">
+                    </div>
+                    <div
+                        class="bg-green flex items-center cursor-pointer mt-2 justify-center font-bold px-4 py-2 text-sm text-white">
+                        Find Doctors
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- about section -->
+    <section class="bg-yellow flex flex-col gap-y-6 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
+        <div class="flex flex-col items-center">
+            <p class="text-primary-text">Know More About</p>
+            <img src="./assets/images/Logo.png" alt="logo" class="w-84">
+        </div>
+        <div class="owl-carousel know-more gap-4">
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 43.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 42.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 41.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <section class="footer px-6 sm:px-8 md:px-14 xl:px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
+            <div class="flex flex-col gap-6">
+                <a href="/">
+                    <h1 class="text-white text-4xl">Doctor <span class="text-orange-400 font-bold">X</span></h1>
+                </a>
+                <div
+                    class="w-full overflow-x-scroll md:overflow-x-auto whitespace-nowrap flex flex-row md:flex-col gap-4 text-sm md:text-base">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Home</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">About Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Career</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Contact Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Help Center</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Discover</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Stories for and
+                        about for Patients</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Community
+                        Standard</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Practice resources
+                        for Providers</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Data and
+                        Privacy</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Varified
+                        Reviews</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Top Specialists</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dentist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dermatologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Neurologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Paediatrician</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Cardiologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Radiologist</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Are you a Top Doctor or Health Service?</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Doctor at
+                        DoctorX</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Health
+                        Partner</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Learn about
+                        DoctorX Enterprise Solution</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-xs text-white leading-5">The content provided here and elsewhere on the Zocdoc site or mobile app
+            is provided for general informational purposes only. It is not intended as, and Zocdoc does not provide,
+            medical advice, diagnosis or treatment. Always contact your healthcare provider directly with any questions
+            you may have regarding your health or specific medical advice.</p>
+    </section>
+    <!-- mid footer section -->
+    <section class="mid-footer px-6 sm:px-8 md:px-14 xl:px-24 bg-black text-white py-10">
+        <div class="flex flex-col md:flex-row items-start gap-4 md:gap-0 md:items-center justify-between">
+            <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                <p class="font-semibold">© 2025 DoctorX Private Limited</p>
+                <div class="flex gap-4 text-sm text-stone-400">
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Terms</a>
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Privacy</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Consumer
+                        Health</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Site
+                        Map</a>
+                </div>
+            </div>
+            <div class="social-icons flex items-center gap-6 text-xl text-stone-400">
+                <a href="#"><i
+                        class="fa-brands fa-facebook transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-instagram transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-linkedin transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- bottom footer section -->
+    <section class="bottom-footer p-6 flex justify-end">
+        <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
+                src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
+    </section>
+    <script src="./assets/js/slider.js"></script>
+</body>
+
+</html>
