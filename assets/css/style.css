@@ -3,7 +3,9 @@ body{
     font-family: "Inter", sans-serif;
 }
 
-
+.active{
+    background-color: #efe6dd;
+}
 
 @media (min-width:1028px) and (max-width:1310px) {
     .search-bar{
