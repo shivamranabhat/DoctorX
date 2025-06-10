@@ -31,3 +31,39 @@ body{
         padding-bottom: 1.5rem;
     }
 }
+@media screen and (max-width: 640px) {
+    .responsive-table {
+        display: block;
+    }
+
+    .responsive-table thead {
+        display: none;
+    }
+
+    .responsive-table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .responsive-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .responsive-table td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #1f2937;
+        width: 40%;
+    }
+
+    .responsive-table td:last-child {
+        border-bottom: none;
+    }
+}
