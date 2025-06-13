@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{
+    font-family: "Inter", sans-serif;
+}
+
+.active{
+    background-color: #efe6dd;
+}
+
+@media (min-width:1028px) and (max-width:1310px) {
+    .search-bar{
+       bottom:-1rem;
+    }
+   
+}
+
+@media (max-width:967px) {
+    .hero-image img{
+        display: none;
+    }
+    .search-bar{
+        display: none;
+    }
+    .sm-search-bar{
+        display: block;
+    }
+    .search-container{
+        position: static;
+    }
+    .hero-section{
+        padding-bottom: 1.5rem;
+    }
+}

@@ -15,13 +15,16 @@
             // For medium screens (tablets)
             800: {
                 items: 2.5, // 2.5 items on medium screens
+                 margin:20,
             },
             480: {
                 items: 1.2, // 1 and 20% items on medium screens
+                 margin:20,
             },
             // For small screens (mobile)
             0: {
                 items: 1.2, // 1.2 item on small screens
+                 margin:20,
             }
         }
     });
@@ -41,13 +44,16 @@
             // For medium screens (tablets)
             800: {
                 items: 2.5, // 2.5 items on medium screens
+                margin:20,
             },
             480: {
                 items: 1.2, // 1 and 20% items on medium screens
+                margin:20,
             },
             // For small screens (mobile)
             0: {
                 items: 1.2, // 1.2 item on small screens
+                margin:20,
             }
         }
     });
@@ -67,18 +73,21 @@
             // For medium screens (tablets)
             800: {
                 items: 2.5, // 2.5 items on medium screens
+                margin:20,
             },
             480: {
                 items: 1.2, // 1 and 20% items on medium screens
+                margin:20,
             },
             // For small screens (mobile)
             0: {
                 items: 1.2, // 1.2 item on small screens
+                margin:20,
             }
         }
     });
   $(".doctor-card").owlCarousel({
-        items: 4,
+        items: 3.7,
         margin:30,
         loop: false,
         autoplay: false,
@@ -88,18 +97,21 @@
         responsive: {
             // For large screens (desktop)
             1200: {
-                items: 4, // 4 items on large screens
+                items: 3.7, // 3.7 items on large screens
             },
             // For medium screens (tablets)
             800: {
                 items: 2.5, // 2.5 items on medium screens
+                margin:20,
             },
             480: {
                 items: 1.2, // 1 and 20% items on medium screens
+                margin:20,
             },
             // For small screens (mobile)
             0: {
                 items: 1, // 1.2 item on small screens
+                margin:20,
             }
         }
     });
@@ -119,13 +131,16 @@
             // For medium screens (tablets)
             767: {
                 items: 2.5, // 2.5 items on medium screens
+                margin:20,
             },
             480: {
                 items: 1.2, // 1 and 20% items on medium screens
+                margin:20,
             },
             // For small screens (mobile)
             0: {
                 items: 1, // 1 item on small screens
+                margin:20,
             }
         }
     });

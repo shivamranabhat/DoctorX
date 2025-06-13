@@ -3,22 +3,28 @@ body{
     font-family: "Inter", sans-serif;
 }
 
-.active{
+/* .active {
     background-color: #efe6dd;
 }
+ */
 
-@media (min-width:1028px) and (max-width:1310px) {
+@media (max-width:1410px) {
     .search-bar{
-       bottom:-1rem;
+       bottom:-3rem;
     }
    
+}
+@media (min-width:1200px) and (max-width:1300px) {
+    .search-bar{
+       bottom:-3rem;
+    }
 }
 
 @media (max-width:967px) {
     .hero-image img{
         display: none;
     }
-    .search-bar{
+    .doctor-search-bar{
         display: none;
     }
     .sm-search-bar{

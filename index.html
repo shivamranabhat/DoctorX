@@ -39,13 +39,12 @@
     <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
         <nav class="flex justify-between items-center">
             <div class="flex">
-                <button class="inline md:hidden">
+                <button class="inline md:hidden" id="ham-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="#E67C40" class="size-8">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-
                 </button>
                 <img src="./assets/images/logo.png" alt="logo" class="w-48">
             </div>
@@ -84,6 +83,68 @@
                 </li>
             </ul>
         </nav>
+        <div id="mobile-menu"
+            class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
+            <div class="upper-col px-4 pt-4 pb-8 flex flex-col items-start gap-14">
+                <div class="w-full flex justify-between items-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-10">
+                    <button id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6 w-[80%] md:w-[60%] mx-auto">
+                    <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
+                        <a href="#" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="links bg-footer-blue w-full p-6 flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">DoctorX</h5>
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
+                        <a href="#" class="text-gray-400 text-sm">Home</a>
+                        <a href="#" class="text-gray-400 text-sm">About Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Career</a>
+                        <a href="#" class="text-gray-400 text-sm">Contact Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Help Center</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Discover</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Stories for and about for Patients</a>
+                        <a href="#" class="text-gray-400 text-sm">Community Standard</a>
+                        <a href="#" class="text-gray-400 text-sm">Practice resources for Providers</a>
+                        <a href="#" class="text-gray-400 text-sm">Data and Privacy</a>
+                        <a href="#" class="text-gray-400 text-sm">Verified Reviews</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Top Specialists</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Dentist</a>
+                        <a href="#" class="text-gray-400 text-sm">Dermatologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Neurologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Paediatrician</a>
+                        <a href="#" class="text-gray-400 text-sm">Cardiologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Radiologist</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Are you a top doctor or health service?</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Become a Doctor at DoctorX</a>
+                        <a href="#" class="text-gray-400 text-sm">Become a Heath Partner</a>
+                        <a href="#" class="text-gray-400 text-sm">Learn about DoctorX Enterprise Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="hero-section relative flex flex-col  lg:block">
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 z-10">
                 <div class="hero-text flex flex-col gap-4 mt-12">
@@ -111,10 +172,10 @@
                     </div>
                 </div>
                 <div class="hero-image flex justify-center">
-                    <img src="./assets/images/hero-image.png" alt="Doctor" class="w-full max-w-[37.2rem] object-cover">
+                    <img src="./assets/images/hero-image.png" alt="Doctor" class="w-full max-w-[37.8rem] object-cover">
                 </div>
             </div>
-            <div class="w-full search-container absolute z-20 bottom-12 left-0 mx-auto">
+            <div class="w-full search-container absolute z-20 bottom-20 left-0 mx-auto">
                 <div class="search-bar relative">
                     <div class="border-2 border-black grid grid-cols-13 rounded overflow-hidden">
                         <div class="bg-white border-r border-gray-300 col-span-4 flex items-center justify-center px-4">
@@ -206,7 +267,7 @@
         class="doctor py-10 px-6 sm:px-8 md:px-14 xl:px-24 flex flex-col gap-y-6 border-b-1 md:border-b-0 border-gray-300">
         <div class="title flex flex-col gap-y-2">
             <div class="flex items-center justify-between">
-                <h2 class="text-lg md:text-2xl font-semibold flex md:block items-start">Top-rated primary care doctors
+                <h2 class="text-lg md:text-2xl font-semibold">Top-rated primary care doctors
                     <span
                         class="bg-footer-blue mt-2 md:mt-0 ml-0 md:ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
                 </h2>
@@ -217,7 +278,7 @@
                 experience, reliability, and patient satisfaction.</p>
         </div>
         <div class="owl-carousel doctor-card">
-            <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
+            <div class="bg-white card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
                 <div class="flex gap-4">
                     <div class="image relative size-[5rem]">
                         <img src="./assets/images/doctor.png" alt="doctor" class="size-full rounded-full object-cover">
@@ -247,7 +308,7 @@
                     Lakeside, Pokhara
                 </h5>
 
-                <div class="flex flex-wrap gap-x-4 text-primary-text">
+                <div class="flex flex-wrap gap-x-4 text-gray-600">
                     <p>&#8226;New patient appointments</p>
                     <p>&#8226;Excellent wait time</p>
                     <p>&#8226;Highly recommended</p>
@@ -260,7 +321,7 @@
                     </a>
                 </div>
             </div>
-            <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
+            <div class="bg-white card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
                 <div class="flex gap-4">
                     <div class="image relative size-[5rem]">
                         <img src="./assets/images/doctor.png" alt="doctor" class="size-full rounded-full object-cover">
@@ -290,7 +351,7 @@
                     Lakeside, Pokhara
                 </h5>
 
-                <div class="flex flex-wrap gap-x-4 text-primary-text">
+                <div class="flex flex-wrap gap-x-4 text-gray-600">
                     <p>&#8226;New patient appointments</p>
                     <p>&#8226;Excellent wait time</p>
                     <p>&#8226;Highly recommended</p>
@@ -303,7 +364,7 @@
                     </a>
                 </div>
             </div>
-            <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
+            <div class="bg-white card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
                 <div class="flex gap-4">
                     <div class="image relative size-[5rem]">
                         <img src="./assets/images/doctor.png" alt="doctor" class="size-full rounded-full object-cover">
@@ -333,7 +394,7 @@
                     Lakeside, Pokhara
                 </h5>
 
-                <div class="flex flex-wrap gap-x-4 text-primary-text">
+                <div class="flex flex-wrap gap-x-4 text-gray-600">
                     <p>&#8226;New patient appointments</p>
                     <p>&#8226;Excellent wait time</p>
                     <p>&#8226;Highly recommended</p>
@@ -346,7 +407,7 @@
                     </a>
                 </div>
             </div>
-            <div class="card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
+            <div class="bg-white card border border-gray-300 rounded-lg p-4 flex flex-col gap-y-4">
                 <div class="flex gap-4">
                     <div class="image relative size-[5rem]">
                         <img src="./assets/images/doctor.png" alt="doctor" class="size-full rounded-full object-cover">
@@ -376,7 +437,7 @@
                     Lakeside, Pokhara
                 </h5>
 
-                <div class="flex flex-wrap gap-x-4 text-primary-text">
+                <div class="flex flex-wrap gap-x-4 text-gray-600">
                     <p>&#8226;New patient appointments</p>
                     <p>&#8226;Excellent wait time</p>
                     <p>&#8226;Highly recommended</p>
@@ -824,6 +885,25 @@
         <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
                 src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamBtn = document.getElementById('ham-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('opacity-0', 'invisible');
+                mobileMenu.classList.add('opacity-100', 'visible');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('opacity-100', 'visible');
+                mobileMenu.classList.add('opacity-0', 'invisible');
+            });
+
+        });
+
+    </script>
     <script src="./assets/js/slider.js"></script>
 </body>
 
