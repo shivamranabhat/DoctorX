@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor X</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-primary: #095D7E;
+        --color-primary-text:#333333;
+        --color-thin-gray:#6B6B6B;
+        --color-hero:#FDFAEE;
+        --color-green:#14967F;
+        --color-footer-blue : #095d7e;
+        --color-yellow: #FFF0BB66;
+        --color-button-green: #14967F;
+        --color-button-yellow: #FFF04B;
+        --color-button-grey: #EBEAE8;
+      }
+    </style>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="bg-primary text-white p-3 flex items-center justify-center">
+        <p>Get 50% on your first subscription <a href="#" class="font-bold">Click Here</a></p>
+    </header>
+    <!-- hero section -->
+    <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
+         <nav class="flex justify-between items-center">
+            <div class="flex">
+                <button class="inline lg:hidden" id="ham-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#E67C40" class="size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <img src="./assets/images/logo.png" alt="logo" class="w-48">
+            </div>
+            <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
+                <li class="relative group hidden lg:inline">
+                    <a href="#" class="flex items-center gap-1 text-primary-text">Find Doctors
+                        <img src="./assets/images/chevron.svg" alt="chevron">
+                    </a>
+                    <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 1</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 2</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 3</a></li>
+                    </ul>
+                </li>
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Diagnostic Lab</a></li>
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Hospitals</a></li>
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Radiology</a></li>
+                <li class="relative group">
+                    <a href="#" class="flex items-center gap-1 text-primary-text">Login
+                        <img src="./assets/images/chevron.svg" alt="chevron">
+                    </a>
+                    <ul
+                        class="absolute left-[-2rem] mt-1 w-48 p-4 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
+                        <div class="border-b border-gray-400 flex flex-col gap-2 pb-2">
+                            <h5 class="text-lg text-gray-700 font-normal">Patients</h5>
+                            <li><a href="#" class="block font-normal text-gray-600 py-2 hover:bg-gray-100">Log
+                                    in</a></li>
+                        </div>
+                        <div class="flex flex-col gap-2 pb-2">
+                            <h5 class="text-lg text-gray-700 font-normal">Doctors</h5>
+                            <li><a href="#" class="block font-normal py-2 text-gray-600 hover:bg-gray-100">Log in</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobile-menu"
+            class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
+            <div class="upper-col px-4 pt-4 pb-8 flex flex-col items-start gap-14">
+                <div class="w-full flex justify-between items-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-10">
+                    <button id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6 w-[80%] md:w-[60%] mx-auto">
+                    <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
+                        <a href="#" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="links bg-footer-blue w-full p-6 flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">DoctorX</h5>
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
+                        <a href="#" class="text-gray-400 text-sm">Home</a>
+                        <a href="#" class="text-gray-400 text-sm">About Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Career</a>
+                        <a href="#" class="text-gray-400 text-sm">Contact Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Help Center</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Discover</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Stories for and about for Patients</a>
+                        <a href="#" class="text-gray-400 text-sm">Community Standard</a>
+                        <a href="#" class="text-gray-400 text-sm">Practice resources for Providers</a>
+                        <a href="#" class="text-gray-400 text-sm">Data and Privacy</a>
+                        <a href="#" class="text-gray-400 text-sm">Verified Reviews</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Top Specialists</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Dentist</a>
+                        <a href="#" class="text-gray-400 text-sm">Dermatologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Neurologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Paediatrician</a>
+                        <a href="#" class="text-gray-400 text-sm">Cardiologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Radiologist</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Are you a top doctor or health service?</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Become a Doctor at DoctorX</a>
+                        <a href="#" class="text-gray-400 text-sm">Become a Heath Partner</a>
+                        <a href="#" class="text-gray-400 text-sm">Learn about DoctorX Enterprise Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="signup-container py-10 md:py-20">
+            <div class="flex flex-col gap-4 bg-white shadow-lg px-8 py-10 rounded-lg w-full sm:w-[70%] md:w-[60%] lg:w-[40%] mx-auto">
+                <h1 class="font-medium text-2xl">Login to your account</h1>
+                <input type="text" placeholder="Mobile Number"
+                        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="submit" value="Continue" class="w-full uppercase bg-green text-white font-semibold py-2 rounded-md hover:bg-[#18B195] transition duration-200 cursor-pointer">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer section -->
+    <section class="footer px-6 sm:px-8 md:px-14 xl:px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
+            <div class="flex flex-col gap-6">
+                <a href="/">
+                    <h1 class="text-white text-4xl">Doctor <span class="text-orange-400 font-bold">X</span></h1>
+                </a>
+                <div
+                    class="w-full overflow-x-scroll md:overflow-x-auto whitespace-nowrap flex flex-row md:flex-col gap-4 text-sm md:text-base">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Home</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">About Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Career</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Contact Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Help Center</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Discover</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Stories for and
+                        about for Patients</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Community
+                        Standard</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Practice resources
+                        for Providers</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Data and
+                        Privacy</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Varified
+                        Reviews</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Top Specialists</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dentist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dermatologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Neurologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Paediatrician</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Cardiologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Radiologist</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Are you a Top Doctor or Health Service?</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Doctor at
+                        DoctorX</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Health
+                        Partner</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Learn about
+                        DoctorX Enterprise Solution</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-xs text-white leading-5">The content provided here and elsewhere on the Zocdoc site or mobile app
+            is provided for general informational purposes only. It is not intended as, and Zocdoc does not provide,
+            medical advice, diagnosis or treatment. Always contact your healthcare provider directly with any questions
+            you may have regarding your health or specific medical advice.</p>
+    </section>
+    <!-- mid footer section -->
+    <section class="mid-footer px-6 sm:px-8 md:px-14 xl:px-24 bg-black text-white py-10">
+        <div class="flex flex-col md:flex-row items-start gap-4 md:gap-0 md:items-center justify-between">
+            <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                <p class="font-semibold">© 2025 DoctorX Private Limited</p>
+                <div class="flex gap-4 text-sm text-stone-400">
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Terms</a>
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Privacy</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Consumer
+                        Health</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Site
+                        Map</a>
+                </div>
+            </div>
+            <div class="social-icons flex items-center gap-6 text-xl text-stone-400">
+                <a href="#"><i
+                        class="fa-brands fa-facebook transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-instagram transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-linkedin transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- bottom footer section -->
+    <section class="bottom-footer p-6 flex justify-end">
+        <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
+                src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
+    </section>
+    <script src="./assets/js/hammenu.js"></script>
+</body>
+
+</html>
