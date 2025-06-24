@@ -12,6 +12,10 @@ html,body{
     background-color: #efe6dd;
 }
  */
+.testimonial img{
+    width: 4rem !important;
+}
+
 
 @media (max-width:1410px) {
     .search-bar{

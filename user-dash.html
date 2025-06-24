@@ -179,7 +179,7 @@
                 </div>
     
                 <div id="sidebar"
-                    class="flex lg:hidden flex-col gap-4 p-8 col-span-2 absolute inset-y-0 left-[-2rem] w-64 bg-[#095D7E] shadow-lg transform -translate-x-full lg:transform-none lg:static z-50 transition-transform duration-300 ease-in-out">
+                    class="flex lg:hidden flex-col gap-4 p-8 col-span-2 absolute inset-y-0 left-[-4rem] w-64 bg-[#095D7E] shadow-lg transform -translate-x-full lg:transform-none lg:static z-50 transition-transform duration-300 ease-in-out">
                     <a href="#" class="text-white text-2xl">Overview</a>
                     <a href="#" class="text-white text-2xl">Payments</a>
                     <a href="#" class="text-white text-2xl">Reports</a>
@@ -315,51 +315,7 @@
         <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
                 src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
     </section>
-    <script src="./assets/js/slider.js"></script>
-    <script>
-        const toggleSidebar = document.getElementById('toggleSidebar');
-        const sidebar = document.getElementById('sidebar');
-        const dashboard = document.getElementById('dashboard');
-
-        // Set sidebar height to match dashboard height on mobile
-        function setSidebarHeight() {
-            if (window.innerWidth < 1024) { // Below lg breakpoint
-                const dashboardHeight = dashboard.offsetHeight;
-                sidebar.style.height = `${dashboardHeight}px`;
-                sidebar.style.overflowY = 'auto';
-            } else {
-                sidebar.style.height = 'auto';
-                sidebar.style.overflowY = 'visible';
-            }
-        }
-
-        // Initial height adjustment
-        setSidebarHeight();
-
-        // Adjust height on window resize
-        window.addEventListener('resize', setSidebarHeight);
-
-        // Toggle sidebar on mobile devices
-        toggleSidebar.addEventListener('click', () => {
-            sidebar.classList.toggle('-translate-x-full');
-            sidebar.classList.toggle('left-0');
-            sidebar.classList.toggle('left-[-2rem]');
-        });
-
-       
-
-        // Close sidebar when clicking outside on mobile devices
-        document.addEventListener('click', (e) => {
-            if (
-                !sidebar.contains(e.target) &&
-                !toggleSidebar.contains(e.target) &&
-                !sidebar.classList.contains('-translate-x-full') &&
-                window.innerWidth < 1024
-            ) {
-                sidebar.classList.add('-translate-x-full');
-            }
-        });
-    </script>
+    <script src="./assets/js/user-dash.js"></script>
 </body>
 
 </html>
