@@ -106,7 +106,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div class="flex flex-col gap-4 order-2 lg:order-1">
                 <div class="bg-[#F3EFE4] flex flex-col sm:flex-row gap-6 py-4 border border-[#E0DDD3]">
-                    <div class="flex flex-col items-center justify-center gap-y-2 border-b pb-3 sm:pb-0 sm:border-b-0 border-r-0 sm:border-r border-gray-400 px-6">
+                    <div
+                        class="flex flex-col items-center justify-center gap-y-2 border-b pb-3 sm:pb-0 sm:border-b-0 border-r-0 sm:border-r border-gray-400 px-6">
                         <h5 class="text-5xl">4.11</h5>
                         <p class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30" class="size-5">
@@ -148,16 +149,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#F3EFE4] border border-[#E0DDD3] flex gap-6 items-center overflow-x-auto">
-                    <button class="bg-button-green px-4 py-2 text-white cursor-pointer">About</button>
+                <div class="tabs bg-[#F3EFE4] border border-[#E0DDD3] flex gap-6 items-center overflow-x-auto">
+                    <button class="tab-btn active bg-button-green px-4 py-2 text-white cursor-pointer"
+                        data-target="#about">About</button>
                     <button
-                        class="transition-all duration-300 hover:ease hover:text-black text-thin-gray cursor-pointer">Education</button>
+                        class="tab-btn transition-all duration-300 px-4 py-2 hover:ease text-thin-gray cursor-pointer"
+                        data-target="#education">Education</button>
                     <button
-                        class="transition-all duration-300 hover:ease hover:text-black text-thin-gray cursor-pointer">Experience</button>
+                        class="tab-btn transition-all duration-300 px-4 py-2 hover:ease text-thin-gray cursor-pointer"
+                        data-target="#experience">Experience</button>
                     <button
-                        class="transition-all duration-300 hover:ease hover:text-black text-thin-gray cursor-pointer">Reviews</button>
+                        class="tab-btn transition-all duration-300 px-4 py-2 hover:ease text-thin-gray cursor-pointer"
+                        data-target="#reviews">Reviews</button>
                 </div>
-                <div class="details  flex flex-col gap-4 mt-4">
+                <div id="about" class="tab-content  flex flex-col gap-4 mt-4">
                     <div class="flex flex-col gap-1">
                         <h5 class="text-xl font-semibold text-thin-gray">About Dr. Michelle Lee</h5>
                         <p class="text-thin-gray">Dr. Michelle Lee, DDS is a Dentist in Atlanta, GA. She has been
@@ -185,7 +190,20 @@
                         <p class="text-thin-gray">Nepali, English, Hindi, Spanish</p>
                     </div>
                 </div>
-                <div class="reviews hidden  flex-col gap-4 mt-4">
+                <div id="education" class="tab-content  flex flex-col gap-4 mt-4">
+                    <div class="flex flex-col gap-1">
+                        <h5 class="text-xl font-semibold text-thin-gray">Education and Training</h5>
+                        <p class="text-thin-gray">Dental School - University of Michigan School of Dentistry, Doctor of
+                            Dental Surgery</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h5 class="text-xl font-semibold text-thin-gray">Professional Memberships</h5>
+                        <p class="text-thin-gray">American Dental Association <br>
+                            Academy of General Dentistry</p>
+                    </div>
+
+                </div>
+                <div id="reviews" class="tab-content hidden  flex-col gap-4 mt-4">
                     <div class="flex flex-col gap-1">
                         <h5 class="text-xl font-semibold">35 Reviews</h5>
                         <p class="text-thin-gray">All reviews have been submitted by patients after interacting with the
@@ -331,6 +349,96 @@
         </div>
     </section>
     <!-- details section -->
+      <!-- testimonial section -->
+    <section class="flex flex-col gap-y-10 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
+        <div class="flex flex-col items-center gap-1 md:gap-2">
+            <p class="text-primary-text">Happy Patients</p>
+            <h5 class="text-lg md:text-3xl font-bold text-center">What Our Patients Are Saying</h5>
+        </div>
+        <div class="owl-carousel testimonials gap-4">
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     <!-- about section -->
     <section class="bg-yellow flex flex-col gap-y-6 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
         <div class="flex flex-col items-center">
@@ -449,6 +557,7 @@
                 src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
     </section>
     <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/tab.js"></script>
 </body>
 
 </html>
