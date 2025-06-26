@@ -40,7 +40,7 @@
         <p>Get 50% on your first subscription <a href="#" class="font-bold">Click Here</a></p>
     </header>
     <!-- hero section -->
-    <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
+    <section class="hero bg-[#FFF9E4] px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
         <nav class="flex justify-between items-center">
             <div class="flex">
                 <button class="inline lg:hidden" id="ham-btn">
@@ -151,16 +151,82 @@
         </div>
         <div class="signup-container py-10 md:py-20">
             <div
-                class="flex flex-col gap-4 bg-white shadow-lg px-8 py-10 rounded-lg w-full sm:w-[70%] md:w-[60%] lg:w-[40%] mx-auto">
-                <h1 class="font-medium text-2xl">Login to your account</h1>
-                <input type="text" placeholder="Mobile Number"
-                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                class="flex flex-col gap-5 bg-white shadow-lg px-8 py-10 rounded-lg w-full sm:w-[70%] md:w-[60%] lg:w-[40%] mx-auto">
+                <h1 class="font-medium text-2xl">Create an account</h1>
+                <div class="flex flex-col gap-2">
+                    <label for="Email">Email</label>
+                    <input type="text" placeholder="example@gmail.com"
+                        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-2">
+                        <label for="First Name">Legal First Name</label>
+                        <input type="text" placeholder="Eg: John"
+                            class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="Last Name">Legal Last Name</label>
+                        <input type="text" placeholder="Eg: Doe"
+                            class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="DOB">Date of Birth</label>
+                    <input type="date"
+                        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="Sex">Sex</label>
+
+                    <div class="flex items-center space-x-4">
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="sex" value="male" class="form-radio text-black focus:ring-black">
+                            <span>Male</span>
+                        </label>
+
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="sex" value="female"
+                                class="form-radio text-black focus:ring-black">
+                            <span>Female</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button id="multiSelectToggle"
+                        class="bg-white border border-gray-300 rounded-md px-4 py-2 text-gray-700 flex items-center justify-between w-64">
+                        <span id="selectedItemsDisplay">Select Interests</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="multiSelectOptions"
+                        class="multi-select-options absolute mt-1 w-64 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+                        <label class="flex items-center px-4 py-2 hover:bg-gray-100">
+                            <input type="checkbox" class="mr-2" value="Technology">
+                            <span>Technology</span>
+                        </label>
+                        <label class="flex items-center px-4 py-2 hover:bg-gray-100">
+                            <input type="checkbox" class="mr-2" value="Science">
+                            <span>Science</span>
+                        </label>
+                        <label class="flex items-center px-4 py-2 hover:bg-gray-100">
+                            <input type="checkbox" class="mr-2" value="Art">
+                            <span>Art</span>
+                        </label>
+                        <label class="flex items-center px-4 py-2 hover:bg-gray-100">
+                            <input type="checkbox" class="mr-2" value="Music">
+                            <span>Music</span>
+                        </label>
+                    </div>
+                </div>
                 <input type="submit" value="Continue"
                     class="w-full uppercase bg-green text-white font-semibold py-2 rounded-md hover:bg-[#18B195] transition duration-200 cursor-pointer">
+                <span class="text-center">
+                    Already have an account? <a href="#" class="underline">Signin</a>
+                </span>
             </div>
-            <span class="text-center">
-                Don't have an account? <a href="#" class="underline">Signup</a>
-            </span>
         </div>
 
     </section>
@@ -256,6 +322,33 @@
                 src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
     </section>
     <script src="./assets/js/hammenu.js"></script>
+    <script>
+        const toggleButton = document.getElementById('multiSelectToggle');
+        const optionsContainer = document.getElementById('multiSelectOptions');
+        const selectedItemsDisplay = document.getElementById('selectedItemsDisplay');
+        const checkboxes = optionsContainer.querySelectorAll('input[type="checkbox"]');
+
+        toggleButton.addEventListener('click', () => {
+            optionsContainer.classList.toggle('show');
+        });
+
+        function updateSelectedItems() {
+            const selectedItems = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+            selectedItemsDisplay.textContent = selectedItems.length > 0 ? selectedItems.join(', ') : 'Select Interests';
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateSelectedItems);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!toggleButton.contains(event.target) && !optionsContainer.contains(event.target)) {
+                optionsContainer.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 
 </html>

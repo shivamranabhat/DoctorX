@@ -15,7 +15,12 @@ html,body{
 .testimonial img{
     width: 4rem !important;
 }
-
+.multi-select-options {
+    display: none;
+}
+.multi-select-options.show {
+    display: block;
+}
 
 @media (max-width:1410px) {
     .search-bar{

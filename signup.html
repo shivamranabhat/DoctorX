@@ -41,7 +41,7 @@
     </header>
     <!-- hero section -->
     <section class="hero bg-[#FFF9E4] px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
-         <nav class="flex justify-between items-center">
+        <nav class="flex justify-between items-center">
             <div class="flex">
                 <button class="inline lg:hidden" id="ham-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -150,11 +150,16 @@
             </div>
         </div>
         <div class="signup-container py-10 md:py-20">
-            <div class="flex flex-col gap-4 bg-white shadow-lg px-8 py-10 rounded-lg w-full sm:w-[70%] md:w-[60%] lg:w-[40%] mx-auto">
-                <h1 class="font-medium text-2xl">Create an account</h1>
+            <div
+                class="flex flex-col gap-5 bg-white shadow-lg px-8 py-10 rounded-lg w-full sm:w-[70%] md:w-[60%] lg:w-[40%] mx-auto">
+                <div class="flex flex-col gap-1">
+                    <h1 class="font-medium text-2xl">Enter your phone number</h1>
+                    <p class="text-thin-gray text-sm">We'll text you to verify your account</p>
+                </div>
                 <input type="text" placeholder="Mobile Number"
-                        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                        <input type="submit" value="Continue" class="w-full uppercase bg-green text-white font-semibold py-2 rounded-md hover:bg-[#18B195] transition duration-200 cursor-pointer">
+                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                <input type="submit" value="Send Verification Code"
+                    class="w-full uppercase bg-green text-white font-semibold py-2 rounded-md hover:bg-[#18B195] transition duration-200 cursor-pointer">
             </div>
         </div>
 
