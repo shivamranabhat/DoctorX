@@ -51,25 +51,35 @@
                 </button>
                 <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
             </div>
-            <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
-                <li class="relative group hidden lg:inline">
-                    <a href="#" class="flex items-center gap-1 text-primary-text">Find Doctors
-                        <img src="./assets/images/chevron.svg" alt="chevron">
-                    </a>
-                    <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
-                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
-                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
-                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
-                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
-                    </ul>
-                </li>
-                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a></li>
-                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
-                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
-                <li class="hidden lg:inline"><a href="user-dash.html" class="text-primary-text font-bold">Abhiyan</a>
-                </li>
-            </ul>
+            <div class="links">
+                <div class="flex lg:hidden justify-end">
+                    <a href="user-dash.html" class="font-semibold flex items-center gap-2">Abhiyan <img src="./assets/images/chevron.svg" alt=""></a>
+
+                </div>
+                <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
+                    <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
+                    <li class="relative group hidden lg:inline">
+                        <a href="#" class="flex items-center gap-1 text-primary-text">Find Doctors
+                            <img src="./assets/images/chevron.svg" alt="chevron">
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a>
+                    </li>
+                    <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
+                    <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
+                    <li class="hidden lg:inline"><a href="user-dash.html"
+                            class="text-primary-text font-bold">Abhiyan</a>
+                    </li>
+                </ul>
+            </div>
+
         </nav>
         <div id="mobile-menu"
             class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
@@ -83,10 +93,10 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex flex-col gap-10 w-full md:w-[60%] mx-auto pb-10">
+                <div class="flex flex-col gap-10 w-full pb-10">
                     <h2 class="text-2xl font-normal">Welcome, Abhiyan!</h2>
                     <div class="flex flex-col gap-10 ">
-                        <a href="#" class="flex gap-2 items-center text-xl">
+                        <a href="user-dash.html" class="flex gap-2 items-center text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -94,13 +104,14 @@
                             </svg>
 
                             Dashboard</a>
-                        <a href="#" class="flex gap-2 items-center text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <a href="appointments.html" class="flex gap-2 items-center text-xl"><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                             Appointments</a>
-                        <a href="#" class="flex gap-2 items-center text-xl">
+                        <a href="payments.html" class="flex gap-2 items-center text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -108,7 +119,7 @@
                             </svg>
 
                             Payments</a>
-                        <a href="#" class="flex gap-2 items-center text-xl">
+                        <a href="personal-details.html" class="flex gap-2 items-center text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
