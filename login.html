@@ -41,7 +41,7 @@
     </header>
     <!-- hero section -->
     <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
-        <nav class="flex justify-between items-center">
+        <nav class="navbar flex justify-between items-center">
             <div class="flex">
                 <button class="inline lg:hidden" id="ham-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -50,7 +50,7 @@
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </button>
-                <img src="./assets/images/logo.png" alt="logo" class="w-48">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
             </div>
             <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
                 <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
@@ -59,28 +59,29 @@
                         <img src="./assets/images/chevron.svg" alt="chevron">
                     </a>
                     <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 1</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 2</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 3</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
                     </ul>
                 </li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Diagnostic Lab</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Hospitals</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Radiology</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
                 <li class="relative group">
                     <a href="#" class="flex items-center gap-1 text-primary-text">Login
                         <img src="./assets/images/chevron.svg" alt="chevron">
                     </a>
                     <ul
-                        class="absolute left-[-2rem] mt-1 w-48 p-4 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
+                        class="absolute left-[-2rem] mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
                         <div class="border-b border-gray-400 flex flex-col gap-2 pb-2">
-                            <h5 class="text-lg text-gray-700 font-normal">Patients</h5>
-                            <li><a href="#" class="block font-normal text-gray-600 py-2 hover:bg-gray-100">Log
+                            <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Patients</h5>
+                            <li><a href="login.html" class="block font-normal text-gray-600 py-1 hover:bg-gray-100 px-4">Log
                                     in</a></li>
                         </div>
                         <div class="flex flex-col gap-2 pb-2">
-                            <h5 class="text-lg text-gray-700 font-normal">Doctors</h5>
-                            <li><a href="#" class="block font-normal py-2 text-gray-600 hover:bg-gray-100">Log in</a>
+                            <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Doctors</h5>
+                            <li><a href="login.html" class="block font-normal py-1 text-gray-600 hover:bg-gray-100 px-4">Log in</a>
                             </li>
                         </div>
                     </ul>
@@ -89,7 +90,7 @@
         </nav>
         <div id="mobile-menu"
             class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
-            <div class="upper-col px-4 pt-4 pb-8 flex flex-col items-start gap-14">
+            <div class="upper-col px-6 pt-4 pb-8 flex flex-col items-start gap-14">
                 <div class="w-full flex justify-between items-center">
                     <img src="./assets/images/logo.png" alt="Logo" class="h-10">
                     <button id="close-btn">
@@ -99,11 +100,11 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex flex-col gap-6 w-[80%] md:w-[60%] mx-auto">
+                <div class="flex flex-col gap-6 w-full md:w-[60%] mx-auto">
                     <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
                     <div class="flex flex-col gap-4">
-                        <a href="#" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
-                        <a href="#" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+                        <a href="signup-i.html" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
+                        <a href="login.html" class="border border-gray-800 px-10 py-2 text-center">Login</a>
                     </div>
                 </div>
             </div>
@@ -111,7 +112,7 @@
                 <div class="flex flex-col gap-2">
                     <h5 class="text-white text-lg font-normal">DoctorX</h5>
                     <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
-                        <a href="#" class="text-gray-400 text-sm">Home</a>
+                        <a href="index.html" class="text-gray-400 text-sm">Home</a>
                         <a href="#" class="text-gray-400 text-sm">About Us</a>
                         <a href="#" class="text-gray-400 text-sm">Career</a>
                         <a href="#" class="text-gray-400 text-sm">Contact Us</a>
@@ -150,21 +151,110 @@
             </div>
         </div>
         <div class="signup-container py-10 md:py-20">
-            <div
+            <form action="password.html"
                 class="flex flex-col gap-4 bg-white shadow-lg px-8 py-10 rounded-lg w-full sm:w-[70%] md:w-[60%] lg:w-[40%] mx-auto">
                 <h1 class="font-medium text-2xl">Login to your account</h1>
                 <input type="text" placeholder="Mobile Number"
                     class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary">
                 <input type="submit" value="Continue"
                     class="w-full uppercase bg-green text-white font-semibold py-2 rounded-md hover:bg-[#18B195] transition duration-200 cursor-pointer">
-            </div>
-            <span class="text-center">
-                Don't have an account? <a href="#" class="underline">Signup</a>
-            </span>
+                    <div class="flex justify-center items-center mt-4">
+                        <span>Don't have an account? <a href="signup-i.html" class="underline">Signup</a></span>
+                </div>
+            </form>
         </div>
 
     </section>
+ <!-- testimonial section -->
+    <section class="flex flex-col gap-y-10 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
+        <div class="flex flex-col items-center gap-1 md:gap-2">
+            <p class="text-primary-text">Happy Patients</p>
+            <h5 class="text-lg md:text-3xl font-bold text-center">What Our Patients Are Saying</h5>
+        </div>
+        <div class="owl-carousel testimonials gap-4">
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
 
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     <!-- footer section -->
     <section class="footer px-6 sm:px-8 md:px-14 xl:px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
@@ -256,6 +346,9 @@
                 src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
     </section>
     <script src="./assets/js/hammenu.js"></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/hammenu.js"></script>
+    <script src="./assets/js/stick.js"></script>
 </body>
 
 </html>

@@ -41,17 +41,16 @@
     </header>
     <!-- hero section -->
     <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
-        <nav class="flex justify-between items-center">
+       <nav class="navbar flex justify-between items-center">
             <div class="flex">
-                <button class="inline md:hidden">
+                <button class="inline lg:hidden" id="ham-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="#E67C40" class="size-8">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-
                 </button>
-                <img src="./assets/images/logo.png" alt="logo" class="w-48">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
             </div>
             <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
                 <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
@@ -60,34 +59,97 @@
                         <img src="./assets/images/chevron.svg" alt="chevron">
                     </a>
                     <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 1</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 2</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 3</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
                     </ul>
                 </li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Diagnostic Lab</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Hospitals</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Radiology</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
                 <li class="relative group">
                     <a href="#" class="flex items-center gap-1 text-primary-text">Login
                         <img src="./assets/images/chevron.svg" alt="chevron">
                     </a>
                     <ul
-                        class="absolute left-[-2rem] mt-1 w-48 p-4 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
+                        class="absolute left-[-2rem] mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
                         <div class="border-b border-gray-400 flex flex-col gap-2 pb-2">
-                            <h5 class="text-lg text-gray-700 font-normal">Patients</h5>
-                            <li><a href="#" class="block font-normal text-gray-600 py-2 hover:bg-gray-100">Log
+                            <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Patients</h5>
+                            <li><a href="login.html" class="block font-normal text-gray-600 py-1 hover:bg-gray-100 px-4">Log
                                     in</a></li>
                         </div>
                         <div class="flex flex-col gap-2 pb-2">
-                            <h5 class="text-lg text-gray-700 font-normal">Doctors</h5>
-                            <li><a href="#" class="block font-normal py-2 text-gray-600 hover:bg-gray-100">Log in</a>
+                            <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Doctors</h5>
+                            <li><a href="login.html" class="block font-normal py-1 text-gray-600 hover:bg-gray-100 px-4">Log in</a>
                             </li>
                         </div>
                     </ul>
                 </li>
             </ul>
         </nav>
+        <div id="mobile-menu"
+            class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
+            <div class="upper-col px-6 pt-4 pb-8 flex flex-col items-start gap-14">
+                <div class="w-full flex justify-between items-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-10">
+                    <button id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6 w-full md:w-[60%] mx-auto">
+                    <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
+                    <div class="flex flex-col gap-4">
+                        <a href="signup-i.html" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
+                        <a href="login.html" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="links bg-footer-blue w-full p-6 flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">DoctorX</h5>
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
+                        <a href="index.html" class="text-gray-400 text-sm">Home</a>
+                        <a href="#" class="text-gray-400 text-sm">About Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Career</a>
+                        <a href="#" class="text-gray-400 text-sm">Contact Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Help Center</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Discover</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Stories for and about for Patients</a>
+                        <a href="#" class="text-gray-400 text-sm">Community Standard</a>
+                        <a href="#" class="text-gray-400 text-sm">Practice resources for Providers</a>
+                        <a href="#" class="text-gray-400 text-sm">Data and Privacy</a>
+                        <a href="#" class="text-gray-400 text-sm">Verified Reviews</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Top Specialists</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Dentist</a>
+                        <a href="#" class="text-gray-400 text-sm">Dermatologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Neurologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Paediatrician</a>
+                        <a href="#" class="text-gray-400 text-sm">Cardiologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Radiologist</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Are you a top doctor or health service?</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Become a Doctor at DoctorX</a>
+                        <a href="#" class="text-gray-400 text-sm">Become a Heath Partner</a>
+                        <a href="#" class="text-gray-400 text-sm">Learn about DoctorX Enterprise Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="doctor-profile flex items-center justify-between mt-10 md:mt-20">
             <div class="flex gap-4 md:gap-8">
                 <img src="./assets/images/doctor.png" alt="doctor" class="w-26 h-26 object-cover rounded-full">
@@ -97,7 +159,6 @@
                     <p class="text-sm md:text-base text-thin-gray">1080 Peachtree St NE, Ste 2, Atlanta, GA</p>
                 </div>
             </div>
-
         </div>
 
     </section>
@@ -327,8 +388,18 @@
                 <h5 class="text-xl md:text-2xl font-semibold">Book an Appointment</h5>
                 <div class="flex flex-col gap-1">
                     <label for="date" class="text-lg font-semibold">Select Date</label>
-                    <input type="text" id="date" name="date" value="2025/05/30 [2082/02/16]"
-                        class="border-b border-gray-400 w-fit focus:outline-none">
+                    <select name="date" id="date" class="w-[15rem] cursor-pointer pr-3 border-b border-black pb-2">
+                        <option value="">2025/05/30 [2082/02/16]</option>
+                        <option value="">2025/06/01 [2082/02/17]</option>
+                        <option value="">2025/06/02 [2082/02/18]</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="date" class="text-lg font-semibold">Select Mode</label>
+                    <select name="date" id="date" class="w-[15rem] cursor-pointer pr-3 border-b border-black pb-2">
+                        <option value="">Clinic Visit</option>
+                        <option value="">Online Call</option>
+                    </select>
                 </div>
                 <div class="flex flex-col gap-1">
                     <label for="date" class="text-lg font-semibold">Select Available Time</label>
@@ -558,6 +629,8 @@
     </section>
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/tab.js"></script>
+    <script src="./assets/js/stick.js"></script>
+    <script src="./assets/js/hammenu.js"></script>
 </body>
 
 </html>

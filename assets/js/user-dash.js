@@ -5,8 +5,9 @@ const dashboard = document.getElementById('dashboard');
 // Set sidebar height to match dashboard height on mobile
 function setSidebarHeight() {
     if (window.innerWidth < 1024) { // Below lg breakpoint
-        const dashboardHeight = dashboard.offsetHeight;
-        sidebar.style.height = `${dashboardHeight}px`;
+        // const dashboardHeight = dashboard.offsetHeight;
+        // sidebar.style.height = `${dashboardHeight}px`;
+        sidebar.style.height = `380px`;
         sidebar.style.overflowY = 'auto';
     } else {
         sidebar.style.height = 'auto';

@@ -41,17 +41,16 @@
     </header>
     <!-- hero section -->
     <section class="hero bg-[#FFF9E4] px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
-        <nav class="flex justify-between items-center">
+        <nav class="navbar flex justify-between items-center">
             <div class="flex">
-                <button class="inline md:hidden">
+                <button class="inline lg:hidden" id="ham-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="#E67C40" class="size-8">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-
                 </button>
-                <img src="./assets/images/logo.png" alt="logo" class="w-48">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
             </div>
             <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
                 <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
@@ -60,23 +59,85 @@
                         <img src="./assets/images/chevron.svg" alt="chevron">
                     </a>
                     <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 1</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 2</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 3</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
                     </ul>
                 </li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Diagnostic Lab</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Hospitals</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Radiology</a></li>
-                <li class="hidden lg:inline"><a href="#" class="font-semibold uppercase">Abhiyan</a></li>
-
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
+                <li class="hidden lg:inline"><a href="user-dash.html" class="text-primary-text font-bold">Abhiyan</a></li>
             </ul>
         </nav>
+        <div id="mobile-menu"
+            class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
+            <div class="upper-col px-6 pt-4 pb-8 flex flex-col items-start gap-14">
+                <div class="w-full flex justify-between items-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-10">
+                    <button id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6 w-full md:w-[60%] mx-auto">
+                    <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
+                    <div class="flex flex-col gap-4">
+                        <a href="signup-i.html" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
+                        <a href="login.html" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="links bg-footer-blue w-full p-6 flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">DoctorX</h5>
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
+                        <a href="index.html" class="text-gray-400 text-sm">Home</a>
+                        <a href="#" class="text-gray-400 text-sm">About Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Career</a>
+                        <a href="#" class="text-gray-400 text-sm">Contact Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Help Center</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Discover</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Stories for and about for Patients</a>
+                        <a href="#" class="text-gray-400 text-sm">Community Standard</a>
+                        <a href="#" class="text-gray-400 text-sm">Practice resources for Providers</a>
+                        <a href="#" class="text-gray-400 text-sm">Data and Privacy</a>
+                        <a href="#" class="text-gray-400 text-sm">Verified Reviews</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Top Specialists</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Dentist</a>
+                        <a href="#" class="text-gray-400 text-sm">Dermatologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Neurologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Paediatrician</a>
+                        <a href="#" class="text-gray-400 text-sm">Cardiologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Radiologist</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Are you a top doctor or health service?</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Become a Doctor at DoctorX</a>
+                        <a href="#" class="text-gray-400 text-sm">Become a Heath Partner</a>
+                        <a href="#" class="text-gray-400 text-sm">Learn about DoctorX Enterprise Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="dashboard py-10 md:py-20 ">
             <div id="dashboard" class="grid grid-cols-6 lg:grid-cols-9 gap-18 relative">
                 <div class="hidden lg:flex flex-col gap-2 col-span-2">
-                    <div
+                    <a href="user-dash.html"
                         class="group cursor-pointer transition-all duration-300 hover:ease hover:bg-[#efe6dd] rounded-lg flex items-center gap-2 active px-4 py-3">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#898989" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="#898989" class="size-6">
@@ -84,9 +145,9 @@
                                 d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                         </svg>
                         <span class="font-medium">Overview</span>
-                    </div>
-                    <div
-                        class="cursor-pointer group transition-all bg-[#efe6dd] duration-300 hover:ease hover:bg-[#efe6dd] rounded-lg flex items-center gap-2 px-4 py-3">
+                    </a>
+                    <a href="payments.html"
+                        class="cursor-pointer group transition-all duration-300 bg-[#efe6dd] hover:ease hover:bg-[#efe6dd] rounded-lg flex items-center gap-2 px-4 py-3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#898989" class="size-6">
                             <path d="M12 7.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
                             <path fill-rule="evenodd"
@@ -96,7 +157,7 @@
                                 d="M2.25 18a.75.75 0 0 0 0 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 0 0-.75-.75H2.25Z" />
                         </svg>
                         <span class="font-medium">Payments</span>
-                    </div>
+                    </a>
                     <div class="group cursor-pointer">
                         <div
                             class="flex items-center justify-between transition-all duration-300 hover:ease hover:bg-[#efe6dd] rounded-lg px-4 py-3">
@@ -123,12 +184,12 @@
 
                         </div>
                         <div class="flex flex-col gap-y-4 pl-12 items-start mt-1">
-                            <a href="#"
+                            <a href="reports.html"
                                 class="text-sm text-gray-600 duration-300 hover:ease hidden group-hover:block hover:text-[#095D7E] cursor-pointer">Medical
                                 reports</a>
-                            <a href="#"
+                            <a href="reports.html"
                                 class="text-sm text-gray-600 duration-300 hover:ease hidden group-hover:block hover:text-[#095D7E] cursor-pointer">Pescriptions</a>
-                            <a href="#"
+                            <a href="reports.html"
                                 class="text-sm text-gray-600 duration-300 hover:ease hidden group-hover:block hover:text-[#095D7E] cursor-pointer">Official
                                 Documents</a>
                         </div>
@@ -145,7 +206,7 @@
                                 clip-rule="evenodd" />
                         </svg>
 
-                        <span class="font-medium">Appointments</span>
+                        <a href="appointments.html" class="font-medium">Appointments</a>
                     </div>
                     <div class="group cursor-pointer">
                         <div
@@ -167,6 +228,9 @@
 
                         </div>
                         <div class="flex flex-col gap-y-4 pl-12 items-start mt-1">
+                            <a href="personal-details.html"
+                                class="text-sm text-gray-600 duration-300 hover:ease hidden group-hover:block hover:text-[#095D7E] cursor-pointer">Personal
+                                Settings</a>
                             <a href="#"
                                 class="text-sm text-gray-600 duration-300 hover:ease hidden group-hover:block hover:text-[#095D7E] cursor-pointer">Medical
                                 reports</a>
@@ -178,14 +242,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div id="sidebar"
                     class="flex lg:hidden flex-col gap-4 p-8 col-span-2 absolute inset-y-0 left-[-4rem] w-64 bg-[#095D7E] shadow-lg transform -translate-x-full lg:transform-none lg:static z-50 transition-transform duration-300 ease-in-out">
-                    <a href="#" class="text-white text-2xl">Overview</a>
-                    <a href="#" class="text-white text-2xl">Payments</a>
-                    <a href="#" class="text-white text-2xl">Reports</a>
-                    <a href="#" class="text-white text-2xl">Appointments</a>
-                    <a href="#" class="text-white text-2xl">Settings</a>
+                    <a href="user-dash.html" class="text-white text-2xl">Overview</a>
+                    <a href="payments.html" class="text-white text-2xl">Payments</a>
+                    <a href="reports.html" class="text-white text-2xl">Reports</a>
+                    <a href="appointments.html" class="text-white text-2xl">Appointments</a>
+                    <a href="personal-details.html" class="text-white text-2xl">Settings</a>
                     <a href="#" class="text-white text-2xl">Logout</a>
                 </div>
                 <div class="col-span-6 lg:col-span-7 flex flex-col gap-6">
@@ -358,6 +421,8 @@
     </section>
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/user-dash.js"></script>
+    <script src="./assets/js/stick.js"></script>
+    <script src="./assets/js/hammenu.js"></script>
 </body>
 
 </html>

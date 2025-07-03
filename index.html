@@ -41,7 +41,7 @@
     </header>
     <!-- hero section -->
     <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
-        <nav class="flex justify-between items-center">
+        <nav class="navbar flex justify-between items-center">
             <div class="flex">
                 <button class="inline lg:hidden" id="ham-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -50,7 +50,7 @@
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </button>
-                <img src="./assets/images/logo.png" alt="logo" class="w-48">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
             </div>
             <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
                 <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
@@ -59,14 +59,15 @@
                         <img src="./assets/images/chevron.svg" alt="chevron">
                     </a>
                     <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 1</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 2</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Doctor 3</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
                     </ul>
                 </li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Diagnostic Lab</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Hospitals</a></li>
-                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Radiology</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
                 <li class="relative group">
                     <a href="#" class="flex items-center gap-1 text-primary-text">Login
                         <img src="./assets/images/chevron.svg" alt="chevron">
@@ -75,12 +76,12 @@
                         class="absolute left-[-2rem] mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
                         <div class="border-b border-gray-400 flex flex-col gap-2 pb-2">
                             <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Patients</h5>
-                            <li><a href="#" class="block font-normal text-gray-600 py-1 hover:bg-gray-100 px-4">Log
+                            <li><a href="login.html" class="block font-normal text-gray-600 py-1 hover:bg-gray-100 px-4">Log
                                     in</a></li>
                         </div>
                         <div class="flex flex-col gap-2 pb-2">
                             <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Doctors</h5>
-                            <li><a href="#" class="block font-normal py-1 text-gray-600 hover:bg-gray-100 px-4">Log in</a>
+                            <li><a href="login.html" class="block font-normal py-1 text-gray-600 hover:bg-gray-100 px-4">Log in</a>
                             </li>
                         </div>
                     </ul>
@@ -89,7 +90,7 @@
         </nav>
         <div id="mobile-menu"
             class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
-            <div class="upper-col px-4 pt-4 pb-8 flex flex-col items-start gap-14">
+            <div class="upper-col px-6 pt-4 pb-8 flex flex-col items-start gap-14">
                 <div class="w-full flex justify-between items-center">
                     <img src="./assets/images/logo.png" alt="Logo" class="h-10">
                     <button id="close-btn">
@@ -99,11 +100,11 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex flex-col gap-6 w-[80%] md:w-[60%] mx-auto">
+                <div class="flex flex-col gap-6 w-full md:w-[60%] mx-auto">
                     <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
                     <div class="flex flex-col gap-4">
-                        <a href="#" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
-                        <a href="#" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+                        <a href="signup-i.html" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
+                        <a href="login.html" class="border border-gray-800 px-10 py-2 text-center">Login</a>
                     </div>
                 </div>
             </div>
@@ -111,7 +112,7 @@
                 <div class="flex flex-col gap-2">
                     <h5 class="text-white text-lg font-normal">DoctorX</h5>
                     <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
-                        <a href="#" class="text-gray-400 text-sm">Home</a>
+                        <a href="index.html" class="text-gray-400 text-sm">Home</a>
                         <a href="#" class="text-gray-400 text-sm">About Us</a>
                         <a href="#" class="text-gray-400 text-sm">Career</a>
                         <a href="#" class="text-gray-400 text-sm">Contact Us</a>
@@ -275,7 +276,7 @@
                     <span
                         class="bg-footer-blue mt-2 md:mt-0 ml-0 md:ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
                 </h2>
-                <a href="#" class="hidden md:inline underline text-primary-text font-semibold">See all (300+)</a>
+                <a href="doctors.html" class="hidden md:inline underline text-primary-text font-semibold">See all (300+)</a>
             </div>
             <p class="text-primary-text text-sm md:text-base">Connect with the most recommended primary care doctors –
                 chosen for their
@@ -319,7 +320,7 @@
                 </div>
                 <div class="flex flex-col gap-y-1">
                     <p>Next Available: May 14 at 7:00 AM</p>
-                    <a href="#"
+                    <a href="doctor.html"
                         class="bg-green text-white px-6 py-2 rounded text-center font-semibold text-lg hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
@@ -362,7 +363,7 @@
                 </div>
                 <div class="flex flex-col gap-y-1">
                     <p>Next Available: May 14 at 7:00 AM</p>
-                    <a href="#"
+                    <a href="doctor.html"
                         class="bg-green text-white px-6 py-2 rounded text-center font-semibold text-lg hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
@@ -405,7 +406,7 @@
                 </div>
                 <div class="flex flex-col gap-y-1">
                     <p>Next Available: May 14 at 7:00 AM</p>
-                    <a href="#"
+                    <a href="doctor.html"
                         class="bg-green text-white px-6 py-2 rounded text-center font-semibold text-lg hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
@@ -448,14 +449,14 @@
                 </div>
                 <div class="flex flex-col gap-y-1">
                     <p>Next Available: May 14 at 7:00 AM</p>
-                    <a href="#"
+                    <a href="doctor.html"
                         class="bg-green text-white px-6 py-2 rounded text-center font-semibold text-lg hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
                 </div>
             </div>
         </div>
-        <a href="#" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
+        <a href="doctors.html" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
     </section>
     <!-- clinic section -->
     <section
@@ -464,7 +465,7 @@
             <h2 class="text-lg md:text-2xl font-semibold">Find a health clinic or hospital from over 1,000 options <span
                     class="bg-footer-blue ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
             </h2>
-            <a href="#" class="underline text-primary-text font-semibold hidden md:inline">See all (100+)</a>
+            <a href="hospitals.html" class="underline text-primary-text font-semibold hidden md:inline">See all (100+)</a>
         </div>
         <div class="clinic-card grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
             <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
@@ -489,7 +490,7 @@
                 <img src="./assets/images/image-2.png" class="w-full h-28 object-cover max-w-full h-auto" alt="clinic">
             </div>
         </div>
-        <a href="#" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
+        <a href="hospitals.html" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
     </section>
     <!-- diagnostic section -->
     <section
@@ -499,7 +500,7 @@
                 <h2 class="text-lg md:text-2xl font-semibold">Choose a diagnostic lab from 1,000+ test services<span
                         class="bg-footer-blue ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
                 </h2>
-                <a href="#" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+                <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
             </div>
             <p class="text-primary-text">Find certified diagnostic labs from over 1,000 trusted options, making it easy
                 to access reliable testing near you.</p>
@@ -567,7 +568,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
+        <a href="hospitals.html" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
     </section>
     <!-- radiology section -->
     <section
@@ -577,7 +578,7 @@
                 <h2 class="text-lg md:text-2xl font-semibold">Find a Radiology Center from Over 50 Verified Options<span
                         class="bg-footer-blue ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
                 </h2>
-                <a href="#" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+                <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
             </div>
             <p class="text-primary-text text-sm md:text-base">Easily locate trusted radiology centers from a network of
                 over 1,000 verified
@@ -646,14 +647,14 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
+        <a href="hospitals.html" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
     </section>
     <!-- symptoms section -->
     <section
         class="symptoms py-10 px-6 sm:px-8 md:px-14 xl:px-24 flex flex-col gap-y-6 border-b-1 md:border-b-0 border-gray-300">
         <div class="flex items-center justify-between">
             <h2 class="text-lg md:text-2xl font-semibold">Check your symptoms and get care right away.</h2>
-            <a href="#" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+            <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             <div
@@ -699,13 +700,13 @@
                 <h5 class="text-lg font-semibold">Toothache</h5>
             </div>
         </div>
-        <a href="#" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
+        <a href="hospitals.html" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
     </section>
     <!-- hospital appointment section -->
     <section class="appointment py-10 px-6 sm:px-8 md:px-14 xl:px-24 flex flex-col gap-y-6 bg-[#e8f3f1]">
         <div class="flex items-center justify-between">
             <h2 class="text-lg md:text-2xl font-semibold">Book Hospital Appointment</h2>
-            <a href="#" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+            <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
         </div>
         <div class="owl-carousel hospital-card gap-4">
 
@@ -718,7 +719,7 @@
                 <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
                     <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
                     <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
-                    <a href="#"
+                    <a href="hospital.html"
                         class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
@@ -733,7 +734,7 @@
                 <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
                     <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
                     <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
-                    <a href="#"
+                    <a href="hospital.html"
                         class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
@@ -748,7 +749,7 @@
                 <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
                     <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
                     <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
-                    <a href="#"
+                    <a href="hospital.html"
                         class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
@@ -763,14 +764,14 @@
                 <div class="flex flex-col p-4 gap-y-2 border border-gray-400 rounded-b-md">
                     <h5 class="font-semibold">Manmohan Cardiothoracic Vascular and Tra…</h5>
                     <p class="text-primary-text text-sm">Maharajgunj, Kathmandu</p>
-                    <a href="#"
+                    <a href="hospital.html"
                         class="bg-green text-white px-4 py-1 rounded w-fit font-semibold hover:bg-[#18B195] transition duration-200 cursor-pointer">
                         Book Appointment
                     </a>
                 </div>
             </div>
         </div>
-        <a href="#" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
+        <a href="hospitals.html" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
     </section>
     <!-- testimonial section -->
     <section class="flex flex-col gap-y-10 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
@@ -981,6 +982,7 @@
     </section>
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/hammenu.js"></script>
+    <script src="./assets/js/stick.js"></script>
 </body>
 
 </html>
