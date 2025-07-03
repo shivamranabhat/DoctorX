@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor X</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-primary: #095D7E;
+        --color-primary-text:#333333;
+        --color-thin-gray:#6B6B6B;
+        --color-hero:#FDFAEE;
+        --color-green:#14967F;
+        --color-footer-blue : #095d7e;
+        --color-yellow: #FFF0BB66;
+        --color-button-green: #14967F;
+        --color-button-yellow: #FFF04B;
+        --color-button-grey: #EBEAE8;
+      }
+    </style>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="bg-primary text-white p-3 flex items-center justify-center">
+        <p>Get 50% on your first subscription <a href="#" class="font-bold">Click Here</a></p>
+    </header>
+    <!-- hero section -->
+    <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
+        <nav class="navbar flex justify-between items-center">
+            <div class="flex">
+                <button class="inline lg:hidden" id="ham-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#E67C40" class="size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
+            </div>
+            <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
+                <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
+                <li class="relative group hidden lg:inline">
+                    <a href="#" class="flex items-center gap-1 text-primary-text">Find Doctors
+                        <img src="./assets/images/chevron.svg" alt="chevron">
+                    </a>
+                    <ul class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
+                        <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
+                    </ul>
+                </li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
+                <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
+                <li class="relative group">
+                    <a href="#" class="flex items-center gap-1 text-primary-text">Login
+                        <img src="./assets/images/chevron.svg" alt="chevron">
+                    </a>
+                    <ul
+                        class="absolute left-[-2rem] mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
+                        <div class="border-b border-gray-400 flex flex-col gap-2 pb-2">
+                            <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Patients</h5>
+                            <li><a href="login.html"
+                                    class="block font-normal text-gray-600 py-1 hover:bg-gray-100 px-4">Log
+                                    in</a></li>
+                        </div>
+                        <div class="flex flex-col gap-2 pb-2">
+                            <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Doctors</h5>
+                            <li><a href="login.html"
+                                    class="block font-normal py-1 text-gray-600 hover:bg-gray-100 px-4">Log in</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobile-menu"
+            class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
+            <div class="upper-col px-6 pt-4 pb-8 flex flex-col items-start gap-14">
+                <div class="w-full flex justify-between items-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-10">
+                    <button id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6 w-full md:w-[60%] mx-auto">
+                    <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
+                    <div class="flex flex-col gap-4">
+                        <a href="signup-i.html" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
+                        <a href="login.html" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="links bg-footer-blue w-full p-6 flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">DoctorX</h5>
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
+                        <a href="index.html" class="text-gray-400 text-sm">Home</a>
+                        <a href="#" class="text-gray-400 text-sm">About Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Career</a>
+                        <a href="#" class="text-gray-400 text-sm">Contact Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Help Center</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Discover</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Stories for and about for Patients</a>
+                        <a href="#" class="text-gray-400 text-sm">Community Standard</a>
+                        <a href="#" class="text-gray-400 text-sm">Practice resources for Providers</a>
+                        <a href="#" class="text-gray-400 text-sm">Data and Privacy</a>
+                        <a href="#" class="text-gray-400 text-sm">Verified Reviews</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Top Specialists</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Dentist</a>
+                        <a href="#" class="text-gray-400 text-sm">Dermatologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Neurologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Paediatrician</a>
+                        <a href="#" class="text-gray-400 text-sm">Cardiologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Radiologist</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Are you a top doctor or health service?</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Become a Doctor at DoctorX</a>
+                        <a href="#" class="text-gray-400 text-sm">Become a Heath Partner</a>
+                        <a href="#" class="text-gray-400 text-sm">Learn about DoctorX Enterprise Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hospital-profile flex items-center justify-between mt-10 md:mt-20">
+            <div class="flex gap-4 md:gap-8">
+                <img src="./assets/images/hospital.png" alt="hospital" class="w-26 h-26 object-cover rounded-full">
+                <div class="flex flex-col gap-y-1">
+                    <h2 class="text-lg md:text-3xl font-semibold">Gandaki Hospital</h2>
+                    <h5 class="text-base md:text-lg font-semibold">Public Hospital</h5>
+                    <p class="text-sm md:text-base text-thin-gray">Amarsingh Chowk, Pokhara, Gandaki</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- details section -->
+    <section class="details bg-hero py-10 px-6 sm:px-8 md:px-14 xl:px-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-4 order-2 lg:order-1">
+                <div class="bg-[#F3EFE4] flex flex-col sm:flex-row gap-6 py-4 border border-[#E0DDD3]">
+                    <div
+                        class="flex flex-col items-center justify-center gap-y-2 border-b pb-3 sm:pb-0 sm:border-b-0 border-r-0 sm:border-r border-gray-400 px-6">
+                        <h5 class="text-5xl">4.11</h5>
+                        <p class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30" class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-y-4 px-6">
+                        <h5 class="font-semibold text-base">“I love this dental office the staff was so friendly I
+                            didn’t
+                            even feel like it was my first
+                            time. Dr. Chang was great with my extraction...</h5>
+                        <div class="flex justify-between items-center">
+                            <h5 class="font-semibold text-base">Calia B.May 12, 202</h5>
+                            <a href="#" class="hidden md:inline underline text-primary-text font-semibold">See all
+                                (300+)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs bg-[#F3EFE4] border border-[#E0DDD3] flex gap-6 items-center overflow-x-auto">
+                    <button class="tab-btn active bg-button-green px-4 py-2 text-white cursor-pointer"
+                        data-target="#about">About</button>
+                    <button
+                        class="tab-btn transition-all duration-300 px-4 py-2 hover:ease text-thin-gray cursor-pointer"
+                        data-target="#services">Services</button>
+
+                    <button
+                        class="tab-btn transition-all duration-300 px-4 py-2 hover:ease text-thin-gray cursor-pointer"
+                        data-target="#reviews">Reviews</button>
+                </div>
+                <div id="about" class="tab-content  flex flex-col gap-4 mt-4">
+                    <div class="flex flex-col gap-1">
+                        <h5 class="text-xl font-semibold text-thin-gray">About Gandaki Hospital</h5>
+                        <p class="text-thin-gray">Gandaki Hospital, DDS is a Dentist in Atlanta, GA. She has been
+                            practicing
+                            dentistry for over 10 years and is known for her gentle approach and dedication to patient
+                            care.
+                            Dr. Lee graduated from the University of California, Los Angeles (UCLA) School of Dentistry
+                            and
+                            is a member of the American Dental Association (ADA).</p>
+                    </div>
+
+                </div>
+                <div id="services" class="tab-content  flex flex-col gap-4 mt-4">
+                    <div class="flex flex-col gap-1">
+                        <h5 class="text-xl font-semibold text-thin-gray">Services and Training</h5>
+                        <p class="text-thin-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia rerum
+                            amet dolor in hic atque labore nulla voluptas voluptatum consequuntur.</p>
+                    </div>
+
+                </div>
+                <div id="reviews" class="tab-content hidden  flex-col gap-4 mt-4">
+                    <div class="flex flex-col gap-1">
+                        <h5 class="text-xl font-semibold">35 Reviews</h5>
+                        <p class="text-thin-gray">All reviews have been submitted by patients after interacting with the
+                            practice.
+                        </p>
+                    </div>
+                    <div class="review-description flex flex-col gap-y-4 mt-2">
+                        <div class="flex flex-col gap-1">
+                            <p class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </p>
+                            <h5 class="text-lg font-semibold">Great Customer Service and doctor was excellent.</h5>
+                            <p class="text-thin-gray">May 13, 2025 Pamela J.</p>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <p class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </p>
+                            <h5 class="text-lg font-semibold">Great Customer Service and doctor was excellent.</h5>
+                            <p class="text-thin-gray">May 13, 2025 Pamela J.</p>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <p class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F8CC30"
+                                    class="size-6">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </p>
+                            <h5 class="text-lg font-semibold">Great Customer Service and doctor was excellent.</h5>
+                            <p class="text-thin-gray">May 13, 2025 Pamela J.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-white shadow-xl order-1 lg:order-2 flex flex-col gap-4 md:gap-6 p-6 h-fit">
+                <h5 class="text-xl md:text-2xl font-semibold">Book an Appointment</h5>
+                <div class="flex flex-col gap-1">
+                    <label for="date" class="text-lg font-semibold">Select Date</label>
+                    <select name="date" id="date" class="w-[15rem] cursor-pointer pr-3 border-b border-black pb-2">
+                        <option value="">2025/05/30 [2082/02/16]</option>
+                        <option value="">2025/06/01 [2082/02/17]</option>
+                        <option value="">2025/06/02 [2082/02/18]</option>
+                    </select>
+                </div>
+               
+                <div class="flex flex-col gap-1">
+                    <label for="date" class="text-lg font-semibold">Select Available Time</label>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="inline-block cursor-pointer transition-all duration-300 hover:ease hover:bg-[#0E826C] px-2 sm:px-3 py-1 bg-button-green text-white text-xs md:text-sm font-medium">7:30AM</span>
+                        <span
+                            class="inline-block cursor-pointer transition-all duration-300 hover:ease hover:bg-[#DCCF3F] px-2 sm:px-3 py-1 bg-button-yellow text-primary-text text-xs md:text-sm font-medium">8:00AM</span>
+                        <span
+                            class="inline-block cursor-pointer transition-all duration-300 hover:ease hover:bg-[#CBCBCB] px-2 sm:px-3 py-1 bg-button-grey text-gray-700 text-xs md:text-sm font-medium">10:00AM</span>
+                        <span
+                            class="inline-block cursor-pointer transition-all duration-300 hover:ease hover:bg-[#CBCBCB] px-2 sm:px-3 py-1 bg-button-grey text-gray-700 text-xs md:text-sm font-medium">5:00PM</span>
+                    </div>
+                </div>
+                <button type="submit"
+                    class="px-5 py-2 w-fit transition-all duration-300 hover:ease hover:bg-button-grey border border-thin-gray cursor-pointer text-thin-gray">Proceed</button>
+            </div>
+        </div>
+    </section>
+    <!-- details section -->
+    <!-- map section -->
+    <div class="map h-[40vh] lg:h-[60vh] object-cover w-full">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28124.559224498593!2d83.96678632399387!3d28.22037705707405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995952e949e20d3%3A0xd1a87c92842b0fec!2sWestern%20Regional%20Hospital%20%5B%20Gandaki%20Hospital%20%5D!5e0!3m2!1sen!2suk!4v1751565817348!5m2!1sen!2suk"
+            class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- testimonial section -->
+    <section class="flex flex-col gap-y-10 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
+        <div class="flex flex-col items-center gap-1 md:gap-2">
+            <p class="text-primary-text">Happy Patients</p>
+            <h5 class="text-lg md:text-3xl font-bold text-center">What Our Patients Are Saying</h5>
+        </div>
+        <div class="owl-carousel testimonials gap-4">
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card bg-[#F4F4F4] p-6 rounded-lg flex flex-col gap-y-6">
+                <div class="upper-col flex flex-col gap-2">
+                    <h5 class="text-thin-gray font-semibold text-lg">Absolutely Phenomenal</h5>
+                    <p class="text-thin-gray text-sm">The attention to detail and creativity
+                        took my project to the next level.
+                        Couldn’t have asked for better!</p>
+                </div>
+                <div class="testimonial flex items-center gap-2">
+                    <img src="./assets/images/doctor.png" class="object-cover rounded-full w-14 h-14" alt="user">
+                    <div class="flex flex-col">
+                        <h5 class="text-gray-500 font-semibold">Amaya Locosta</h5>
+                        <p class="text-green">Skin Itches</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- about section -->
+    <section class="bg-yellow flex flex-col gap-y-6 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
+        <div class="flex flex-col items-center">
+            <p class="text-primary-text">Know More About</p>
+            <img src="./assets/images/Logo.png" alt="logo" class="w-84">
+        </div>
+        <div class="owl-carousel know-more gap-4">
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 43.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 42.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 41.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <section class="footer px-6 sm:px-8 md:px-14 xl:px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
+            <div class="flex flex-col gap-6">
+                <a href="/">
+                    <h1 class="text-white text-4xl">Doctor <span class="text-orange-400 font-bold">X</span></h1>
+                </a>
+                <div
+                    class="w-full overflow-x-scroll md:overflow-x-auto whitespace-nowrap flex flex-row md:flex-col gap-4 text-sm md:text-base">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Home</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">About Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Career</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Contact Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Help Center</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Discover</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Stories for and
+                        about for Patients</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Community
+                        Standard</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Practice resources
+                        for Providers</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Data and
+                        Privacy</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Varified
+                        Reviews</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Top Specialists</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dentist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dermatologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Neurologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Paediatrician</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Cardiologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Radiologist</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Are you a Top Doctor or Health Service?</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Doctor at
+                        DoctorX</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Health
+                        Partner</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Learn about
+                        DoctorX Enterprise Solution</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-xs text-white leading-5">The content provided here and elsewhere on the Zocdoc site or mobile app
+            is provided for general informational purposes only. It is not intended as, and Zocdoc does not provide,
+            medical advice, diagnosis or treatment. Always contact your healthcare provider directly with any questions
+            you may have regarding your health or specific medical advice.</p>
+    </section>
+    <!-- mid footer section -->
+    <section class="mid-footer px-6 sm:px-8 md:px-14 xl:px-24 bg-black text-white py-10">
+        <div class="flex flex-col md:flex-row items-start gap-4 md:gap-0 md:items-center justify-between">
+            <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                <p class="font-semibold">© 2025 DoctorX Private Limited</p>
+                <div class="flex gap-4 text-sm text-stone-400">
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Terms</a>
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Privacy</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Consumer
+                        Health</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Site
+                        Map</a>
+                </div>
+            </div>
+            <div class="social-icons flex items-center gap-6 text-xl text-stone-400">
+                <a href="#"><i
+                        class="fa-brands fa-facebook transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-instagram transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-linkedin transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- bottom footer section -->
+    <section class="bottom-footer p-6 flex justify-end">
+        <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
+                src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
+    </section>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/tab.js"></script>
+    <script src="./assets/js/stick.js"></script>
+    <script src="./assets/js/hammenu.js"></script>
+</body>
+
+</html>
