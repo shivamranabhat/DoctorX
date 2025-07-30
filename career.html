@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor X</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+       --color-primary: #095D7E;
+        --color-primary-text:#333333;
+        --color-thin-gray:#6B6B6B;
+        --color-hero:#FDFAEE;
+        --color-green:#14967F;
+        --color-footer-blue : #095d7e;
+        --color-yellow: #FFF0BB66;
+        --color-button-green: #14967F;
+        --color-button-yellow: #FFF04B;
+        --color-button-grey: #EBEAE8;
+      }
+    </style>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="bg-primary text-white p-3 flex items-center justify-center">
+        <p>Get 50% on your first subscription <a href="#" class="font-bold">Click Here</a></p>
+    </header>
+    <!-- hero section -->
+    <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
+        <nav class="navbar flex justify-between items-center">
+            <div class="flex">
+                <button class="inline lg:hidden" id="ham-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#E67C40" class="size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
+            </div>
+            <div class="links">
+                <div class="flex lg:hidden justify-end">
+                    <a href="user-dash.html" class="font-semibold flex items-center gap-2">Abhiyan <img
+                            src="./assets/images/chevron.svg" alt=""></a>
+
+                </div>
+                <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
+                    <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
+                    <li class="relative group hidden lg:inline">
+                        <a href="#" class="flex items-center gap-1 text-primary-text">Find Doctors
+                            <img src="./assets/images/chevron.svg" alt="chevron">
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:block z-50">
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Allergist</a></li>
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dentist</a></li>
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Dermatologist</a></li>
+                            <li><a href="doctor.html" class="block px-4 py-2 hover:bg-gray-100">Eye Doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a>
+                    </li>
+                    <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
+                    <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
+                    <li class="hidden lg:inline"><a href="user-dash.html"
+                            class="text-primary-text font-bold">Abhiyan</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div id="mobile-menu"
+            class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
+            <div class="upper-col px-6 pt-4 pb-8 flex flex-col items-start gap-14">
+                <div class="w-full flex justify-between items-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-10">
+                    <button id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-10 w-full pb-10">
+                    <h2 class="text-2xl font-normal">Welcome, Abhiyan!</h2>
+                    <div class="flex flex-col gap-10 ">
+                        <a href="user-dash.html" class="flex gap-2 items-center text-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                            </svg>
+
+                            Dashboard</a>
+                        <a href="appointments.html" class="flex gap-2 items-center text-xl"><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            Appointments</a>
+                        <a href="payments.html" class="flex gap-2 items-center text-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                            </svg>
+
+                            Payments</a>
+                        <a href="personal-details.html" class="flex gap-2 items-center text-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+
+                            Settings</a>
+                        <a href="#" class="flex gap-2 items-center text-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                            </svg>
+
+                            Logout</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="links bg-footer-blue w-full p-6 flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">DoctorX</h5>
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
+                        <a href="index.html" class="text-gray-400 text-sm">Home</a>
+                        <a href="#" class="text-gray-400 text-sm">About Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Career</a>
+                        <a href="#" class="text-gray-400 text-sm">Contact Us</a>
+                        <a href="#" class="text-gray-400 text-sm">Help Center</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Discover</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Stories for and about for Patients</a>
+                        <a href="#" class="text-gray-400 text-sm">Community Standard</a>
+                        <a href="#" class="text-gray-400 text-sm">Practice resources for Providers</a>
+                        <a href="#" class="text-gray-400 text-sm">Data and Privacy</a>
+                        <a href="#" class="text-gray-400 text-sm">Verified Reviews</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Top Specialists</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Dentist</a>
+                        <a href="#" class="text-gray-400 text-sm">Dermatologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Neurologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Paediatrician</a>
+                        <a href="#" class="text-gray-400 text-sm">Cardiologist</a>
+                        <a href="#" class="text-gray-400 text-sm">Radiologist</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-white text-lg font-normal">Are you a top doctor or health service?</h5>
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="text-gray-400 text-sm">Become a Doctor at DoctorX</a>
+                        <a href="#" class="text-gray-400 text-sm">Become a Heath Partner</a>
+                        <a href="#" class="text-gray-400 text-sm">Learn about DoctorX Enterprise Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-section flex flex-col gap-10 md:gap-16 py-10 md:py-20">
+            <div class="flex flex-col gap-16 w-full">
+                <div class="w-full md:w-[60%] mx-auto flex flex-col items-center gap-6">
+                    <h1 class="text-justify md:text-center text-3xl md:text-5xl font-bold">
+                        Radiologist
+                    </h1>
+                    <h2 class="text-justify md:text-center text-3xl lg:text-4xl font-semibold text-primary-text">
+                        Location
+                    </h2>
+                    <button
+                        class="bg-button-green text-white text-xl cursor-pointer hover:bg-[#18B195] transition duration-200 cursor-pointer px-10 py-3 rounded">Apply
+                        Now</button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="career-description">
+        <div class="tabs grid grid-cols-2 w-full border-b border-black flex items-center overflow-x-auto">
+            <button
+                class="tab-btn font-semibold uppercase text-lg md:text-xl bg-button-green p-4 text-white cursor-pointer"
+                data-target="#overview">Role Overview</button>
+            <button
+                class="tab-btn transition-all uppercase text-lg md:text-xl font-semibold duration-300 p-4 hover:ease text-thin-gray cursor-pointer"
+                data-target="#application">Application</button>
+        </div>
+        <div class="details px-6 sm:px-8 md:px-14 xl:px-24 py-6">
+            <div id="overview" class="tab-content flex flex-col gap-4 mt-2">
+                <div class="flex flex-col gap-1">
+                    <h5 class="text-xl font-semibold text-thin-gray">About Dr. Michelle Lee</h5>
+                    <p class="text-thin-gray">Dr. Michelle Lee, DDS is a Dentist in Atlanta, GA. She has been
+                        practicing
+                        dentistry for over 10 years and is known for her gentle approach and dedication to patient
+                        care.
+                        Dr. Lee graduated from the University of California, Los Angeles (UCLA) School of Dentistry
+                        and
+                        is a member of the American Dental Association (ADA).</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h5 class="text-xl font-semibold text-thin-gray">NMC Number</h5>
+                    <p class="text-thin-gray">12345679213D</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h5 class="text-xl font-semibold text-thin-gray">Age</h5>
+                    <p class="text-thin-gray">32 Years Old</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h5 class="text-xl font-semibold text-thin-gray">Gender</h5>
+                    <p class="text-thin-gray">Female</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h5 class="text-xl font-semibold text-thin-gray">Language Spoken</h5>
+                    <p class="text-thin-gray">Nepali, English, Hindi, Spanish</p>
+                </div>
+            </div>
+            <div id="application" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-10 mt-2">
+                <form action="" class="order-2 md:order-1 border border-gray-300 flex flex-col gap-y-6 rounded shadow-lg p-8 md:p-14">
+                    <div class="form-group flex flex-col">
+                        <label for="" class="text-lg font-medium">Full Name</label>
+                        <input type="text" name="name" id="name"
+                            class="border-b border-gray-800 py-2 focus:outline-none placeholder:text-gray-600"
+                            placeholder="Eg: John Doe">
+                    </div>
+                    <div class="form-group flex flex-col">
+                        <label for="" class="text-lg font-medium">Contact Number</label>
+                        <input type="text" name="number" id="number"
+                            class="border-b border-gray-800 py-2 focus:outline-none placeholder:text-gray-600"
+                            placeholder="98XXXXXXXX">
+                    </div>
+                    <div class="form-group flex flex-col">
+                        <label for="" class="text-lg font-medium">Email</label>
+                        <input type="text" name="email" id="email"
+                            class="border-b border-gray-800 py-2 focus:outline-none placeholder:text-gray-600"
+                            placeholder="someone@example.com">
+                    </div>
+                  
+                    <div class="w-full mb-5">
+                        <label for="dropzone-file"
+                            class="flex flex-col items-center justify-center py-9 w-full border border-gray-300 border-dashed rounded-md cursor-pointer bg-gray-50 ">
+                            <div class="mb-3 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                    fill="none">
+                                    <g id="Upload 02">
+                                        <path id="icon"
+                                            d="M16.296 25.3935L19.9997 21.6667L23.7034 25.3935M19.9997 35V21.759M10.7404 27.3611H9.855C6.253 27.3611 3.33301 24.4411 3.33301 20.8391C3.33301 17.2371 6.253 14.3171 9.855 14.3171V14.3171C10.344 14.3171 10.736 13.9195 10.7816 13.4326C11.2243 8.70174 15.1824 5 19.9997 5C25.1134 5 29.2589 9.1714 29.2589 14.3171H30.1444C33.7463 14.3171 36.6663 17.2371 36.6663 20.8391C36.6663 24.4411 33.7463 27.3611 30.1444 27.3611H29.2589"
+                                            stroke="#14967f" stroke-width="1.6" stroke-linecap="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2 class="text-center text-gray-400   text-xs font-normal leading-4 mb-1">PNG, JPG or PDF</h2>
+                            <h4 class="text-center text-gray-900 text-sm font-medium leading-snug">Drag and Drop your
+                                file here or</h4>
+                            <input id="dropzone-file" type="file" class="hidden" />
+                        </label>
+                    </div>
+                   
+                    <input type="submit" value="Submit"
+                        class="bg-button-green text-white text-lg cursor-pointer hover:bg-[#18B195] transition duration-200 cursor-pointer px-10 py-2 md:py-3 rounded">
+                </form>
+                <div class="flex flex-col gap-1 order-1 md:order-2">
+                    <h5 class="text-xl font-semibold text-thin-gray">About Dr. Michelle Lee</h5>
+                    <p class="text-thin-gray">Dr. Michelle Lee, DDS is a Dentist in Atlanta, GA. She has been
+                        practicing
+                        dentistry for over 10 years and is known for her gentle approach and dedication to patient
+                        care.
+                        Dr. Lee graduated from the University of California, Los Angeles (UCLA) School of Dentistry
+                        and
+                        is a member of the American Dental Association (ADA).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="bg-yellow flex flex-col gap-y-6 py-16 px-6 sm:px-8 md:px-14 xl:px-24">
+        <div class="flex flex-col items-center">
+            <p class="text-primary-text">Know More About</p>
+            <img src="./assets/images/Logo.png" alt="logo" class="w-84">
+        </div>
+        <div class="owl-carousel know-more gap-4">
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 43.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 42.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden w-full rounded-md cursor-pointer">
+                    <img src="./assets/images/Group 41.png"
+                        class="w-full transition-transform duration-300 ease-in-out group-hover:scale-125" alt="Clinic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <section class="footer px-6 sm:px-8 md:px-14 xl:px-24 bg-footer-blue text-white py-10 flex flex-col gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
+            <div class="flex flex-col gap-6">
+                <a href="/">
+                    <h1 class="text-white text-4xl">Doctor <span class="text-orange-400 font-bold">X</span></h1>
+                </a>
+                <div
+                    class="w-full overflow-x-scroll md:overflow-x-auto whitespace-nowrap flex flex-row md:flex-col gap-4 text-sm md:text-base">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Home</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">About Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Career</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Contact Us</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Help Center</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Discover</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Stories for and
+                        about for Patients</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Community
+                        Standard</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Practice resources
+                        for Providers</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Data and
+                        Privacy</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Varified
+                        Reviews</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Top Specialists</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dentist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Dermatologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Neurologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Paediatrician</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Cardiologist</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Radiologist</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6">
+                <h2 class="text-white text-2xl">Are you a Top Doctor or Health Service?</h2>
+                <div class="flex flex-col gap-2 md:gap-3">
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Doctor at
+                        DoctorX</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Become a Health
+                        Partner</a>
+                    <a href="#" class="transition-all duration-200 hover:ease-in hover:text-gray-400">Learn about
+                        DoctorX Enterprise Solution</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-xs text-white leading-5">The content provided here and elsewhere on the Zocdoc site or mobile app
+            is provided for general informational purposes only. It is not intended as, and Zocdoc does not provide,
+            medical advice, diagnosis or treatment. Always contact your healthcare provider directly with any questions
+            you may have regarding your health or specific medical advice.</p>
+    </section>
+    <!-- mid footer section -->
+    <section class="mid-footer px-6 sm:px-8 md:px-14 xl:px-24 bg-black text-white py-10">
+        <div class="flex flex-col md:flex-row items-start gap-4 md:gap-0 md:items-center justify-between">
+            <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                <p class="font-semibold">© 2025 DoctorX Private Limited</p>
+                <div class="flex gap-4 text-sm text-stone-400">
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Terms</a>
+                    <a href="#"
+                        class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Privacy</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Consumer
+                        Health</a>
+                    <a href="#" class="mx-0 transition-all duration-200 hover:ease-in hover:text-white md:mx-2">Site
+                        Map</a>
+                </div>
+            </div>
+            <div class="social-icons flex items-center gap-6 text-xl text-stone-400">
+                <a href="#"><i
+                        class="fa-brands fa-facebook transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-instagram transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-linkedin transition-all duration-200 hover:ease-in hover:text-white"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- bottom footer section -->
+    <section class="bottom-footer p-6 flex justify-end">
+        <a href="https://rangin.com.np/" class="flex gap-4 font-medium">Design &amp; Develop by <img
+                src="https://himalayanswhisper.com/assets/images/rangin-logo.png" class="w-24" alt="rangin-logo"> </a>
+    </section>
+    <script src="./assets/js/tab.js"></script>
+    <script src="./assets/js/hammenu.js"></script>
+    <script src="./assets/js/stick.js"></script>
+    <script src="./assets/js/slider.js"></script>
+</body>
+
+</html>
