@@ -28,6 +28,38 @@ html,body{
     font-family: "Inter", sans-serif !important;
 }
 
+#mobile-menu {
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#mobile-menu .max-h-0 {
+  max-height: 0 !important;
+}
+
+#mobile-menu .max-h-96 {
+  max-height: 24rem !important; /* Adjust if content is taller */
+}
+
+#mobile-menu .opacity-0 {
+  opacity: 0 !important;
+}
+
+#mobile-menu .opacity-100 {
+  opacity: 1 !important;
+}
+
+#mobile-menu .invisible {
+  visibility: hidden !important;
+}
+
+#mobile-menu .visible {
+  visibility: visible !important;
+}
+
+#mobile-menu .accordion-btn svg {
+  transition: transform 0.5s ease-in-out;
+}
+
 @media (max-width:1410px) {
     .search-bar{
        bottom:-3rem;

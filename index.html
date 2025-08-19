@@ -41,8 +41,9 @@
     </header>
     <!-- hero section -->
     <section class="hero bg-hero px-6 sm:px-8 md:px-14 xl:px-24 pt-6">
-        <nav class="navbar flex justify-between items-center">
+        <nav class="navbar flex justify-between items-center relative">
             <div class="flex">
+                <!-- Hamburger Button -->
                 <button class="inline lg:hidden" id="ham-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="#E67C40" class="size-8">
@@ -52,6 +53,8 @@
                 </button>
                 <a href="index.html"><img src="./assets/images/logo.png" alt="logo" class="w-48"></a>
             </div>
+
+            <!-- Desktop Nav -->
             <ul class="flex space-x-6 xl:space-x-10 text-lg text-[1rem] font-semibold">
                 <li class="hidden lg:inline"><a href="#" class="text-primary-text">Request a Call Back</a></li>
                 <li class="relative group hidden lg:inline">
@@ -68,88 +71,88 @@
                 <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Diagnostic Lab</a></li>
                 <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Hospitals</a></li>
                 <li class="hidden lg:inline"><a href="hospitals.html" class="text-primary-text">Radiology</a></li>
-                <li class="relative group">
+                <li class="relative group hidden lg:inline">
                     <a href="#" class="flex items-center gap-1 text-primary-text">Login
                         <img src="./assets/images/chevron.svg" alt="chevron">
                     </a>
                     <ul
-                        class="absolute left-[-2rem] mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 shadow-lg rounded z-50">
+                        class="absolute left-[-2rem] mt-1 w-48 bg-white shadow-xl rounded-md hidden group-hover:flex flex-col gap-3 z-50">
                         <div class="border-b border-gray-400 flex flex-col gap-2 pb-2">
                             <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Patients</h5>
-                            <li><a href="login.html" class="block font-normal text-gray-600 py-1 hover:bg-gray-100 px-4">Log
-                                    in</a></li>
+                            <li><a href="login.html"
+                                    class="block font-normal text-gray-600 py-1 hover:bg-gray-100 px-4">Log in</a></li>
                         </div>
                         <div class="flex flex-col gap-2 pb-2">
                             <h5 class="text-lg text-gray-700 font-normal px-4 py-1">Doctors</h5>
-                            <li><a href="login.html" class="block font-normal py-1 text-gray-600 hover:bg-gray-100 px-4">Log in</a>
-                            </li>
+                            <li><a href="login.html"
+                                    class="block font-normal py-1 text-gray-600 hover:bg-gray-100 px-4">Log in</a></li>
                         </div>
                     </ul>
                 </li>
-            </ul>
-        </nav>
-        <div id="mobile-menu"
-            class="fixed bg-[#fdfaee] inset-0 w-full h-full z-50 opacity-0 invisible transition-all duration-300 overflow-y-auto">
-            <div class="upper-col px-6 pt-4 pb-8 flex flex-col items-start gap-14">
-                <div class="w-full flex justify-between items-center">
-                    <img src="./assets/images/logo.png" alt="Logo" class="h-10">
-                    <button id="close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <li class="inline">
+                    <a href="" class="relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            class="size-6 duration-300 hover:ease-in-out transition-all hover:stroke-[#14967F]"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                         </svg>
+
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Nav -->
+            <div id="mobile-menu"
+                class="absolute bg-white z-30 top-10 rounded border border-gray-200 left-0 w-full shadow-lg p-4 space-y-2 text-gray-800 font-medium lg:hidden max-h-0 overflow-hidden opacity-0 invisible transition-all duration-500 ease-in-out">
+                <!-- Accordion Menu -->
+                <div>
+                    <button class="accordion-btn w-full text-lg flex justify-between items-center py-2"
+                        data-target="doctors">
+                        Find Doctors <span id="icon-doctors"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                class="size-4 transition-transform duration-500 ease-in-out">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg></span>
                     </button>
+                    <div id="menu-doctors"
+                        class="max-h-0 opacity-0 invisible pl-4 flex flex-col gap-y-4 mt-2 text-gray-600 space-y-1 overflow-hidden transition-all duration-500 ease-in-out">
+                        <a href="doctor.html" class="block">Allergist</a>
+                        <a href="doctor.html" class="block">Dentist</a>
+                        <a href="doctor.html" class="block">Dermatologist</a>
+                        <a href="doctor.html" class="block">Eye Doctor</a>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-6 w-full md:w-[60%] mx-auto">
-                    <h2 class="text-2xl font-normal">Welcome to DoctorX</h2>
-                    <div class="flex flex-col gap-4">
-                        <a href="signup-i.html" class="bg-[#14967F] text-center text-white px-10 py-2">Signup</a>
-                        <a href="login.html" class="border border-gray-800 px-10 py-2 text-center">Login</a>
+
+                <a href="hospitals.html" class="block py-2 text-lg">Diagnostic Lab</a>
+                <a href="hospitals.html" class="block py-2 text-lg">Hospitals</a>
+                <a href="hospitals.html" class="block py-2 text-lg">Radiology</a>
+
+                <div>
+                    <button class="accordion-btn text-lg w-full flex justify-between items-center py-2"
+                        data-target="login">
+                        Login <span id="icon-login"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                class="size-4 transition-transform duration-500 ease-in-out">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg></span>
+                    </button>
+                    <div id="menu-login"
+                        class="max-h-0 opacity-0 invisible pl-4 flex flex-col gap-y-4 mt-2 text-gray-600 space-y-1 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="flex flex-col gap-y-2">
+                            <h5 class="font-semibold text-lg">Patients</h5>
+                            <a href="login.html" class="block text-base">Log in</a>
+                        </div>
+                        <div class="flex flex-col gap-y-2 mt-2">
+                            <h5 class="font-semibold text-lg">Providers</h5>
+                            <a href="login.html" class="block text-base">Log in</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="links bg-footer-blue w-full p-6 flex flex-col gap-6">
-                <div class="flex flex-col gap-2">
-                    <h5 class="text-white text-lg font-normal">DoctorX</h5>
-                    <div class="flex items-center overflow-x-auto whitespace-nowrap gap-6">
-                        <a href="index.html" class="text-gray-400 text-sm">Home</a>
-                        <a href="#" class="text-gray-400 text-sm">About Us</a>
-                        <a href="#" class="text-gray-400 text-sm">Career</a>
-                        <a href="#" class="text-gray-400 text-sm">Contact Us</a>
-                        <a href="#" class="text-gray-400 text-sm">Help Center</a>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <h5 class="text-white text-lg font-normal">Discover</h5>
-                    <div class="flex flex-col gap-4">
-                        <a href="#" class="text-gray-400 text-sm">Stories for and about for Patients</a>
-                        <a href="#" class="text-gray-400 text-sm">Community Standard</a>
-                        <a href="#" class="text-gray-400 text-sm">Practice resources for Providers</a>
-                        <a href="#" class="text-gray-400 text-sm">Data and Privacy</a>
-                        <a href="#" class="text-gray-400 text-sm">Verified Reviews</a>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <h5 class="text-white text-lg font-normal">Top Specialists</h5>
-                    <div class="flex flex-col gap-4">
-                        <a href="#" class="text-gray-400 text-sm">Dentist</a>
-                        <a href="#" class="text-gray-400 text-sm">Dermatologist</a>
-                        <a href="#" class="text-gray-400 text-sm">Neurologist</a>
-                        <a href="#" class="text-gray-400 text-sm">Paediatrician</a>
-                        <a href="#" class="text-gray-400 text-sm">Cardiologist</a>
-                        <a href="#" class="text-gray-400 text-sm">Radiologist</a>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <h5 class="text-white text-lg font-normal">Are you a top doctor or health service?</h5>
-                    <div class="flex flex-col gap-4">
-                        <a href="#" class="text-gray-400 text-sm">Become a Doctor at DoctorX</a>
-                        <a href="#" class="text-gray-400 text-sm">Become a Heath Partner</a>
-                        <a href="#" class="text-gray-400 text-sm">Learn about DoctorX Enterprise Solutions</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </nav>
+
+
         <div class="hero-section relative flex flex-col  lg:block">
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 z-10">
                 <div class="hero-text flex flex-col gap-4 mt-12">
@@ -267,6 +270,93 @@
         </div>
 
     </section>
+    <!-- product section -->
+    <section
+        class="doctor py-10 px-6 sm:px-8 md:px-14 xl:px-24 flex flex-col gap-y-6 border-b-1 md:border-b-0 border-gray-300">
+        <div class="title flex flex-col gap-y-2">
+            <div class="flex items-center justify-between">
+                <h2 class="text-lg md:text-2xl font-semibold">Top-rated primary care Products
+                </h2>
+                <a href="products.html" class="hidden md:inline underline text-primary-text font-semibold">See all
+                    (300+)</a>
+            </div>
+            <p class="text-primary-text text-sm md:text-base">Need a lab test? Book your appointment at your preferred
+                time and skip the wait. Fast, friendly, and reliable service guaranteed.</p>
+        </div>
+        <div class="categories flex items-center gap-x-4">
+            <a href="products.html"
+                class="px-4 py-1 cursor-pointer flex items-center gap-x-2 hover:bg-[#18B195] transition duration-200 hover:ease-in-out rounded-4xl bg-button-green text-white">All
+                Products <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="size-5">
+                    <path fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+            <button class="px-4 py-1 cursor-pointer rounded-4xl border border-gray-700">Category 1</button>
+            <button class="px-4 py-1 cursor-pointer rounded-4xl border border-gray-700">Category 2</button>
+            <button class="px-4 py-1 cursor-pointer rounded-4xl border border-gray-700">Category 3</button>
+            <button class="px-4 py-1 cursor-pointer rounded-4xl border border-gray-700">Category 4</button>
+        </div>
+        <div class="owl-carousel product-card">
+            <div class="card cursor-pointer flex flex-col gap-2 border border-[#6B6B6B] pt-4 sm:pt-0">
+                <img src="./assets/images/1.png" class="w-full h-[15rem] object-cover sm:h-full" alt="">
+                <div class="px-4 pb-4 flex flex-col gap-2">
+                    <h5 class="text-primary-text text-lg">Name of the product</h5>
+                    <p class="font-bold text-xl">Rs 1,500</p>
+                    <a href="cart.html"
+                        class="bg-green text-white px-4 py-2 text-center rounded font-semibold hover:bg-[#18B195] transition duration-200 hover:ease-in-out cursor-pointer">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="card cursor-pointer flex flex-col gap-2 border border-[#6B6B6B] pt-4 sm:pt-0">
+                <img src="./assets/images/2.png" class="w-full h-[15rem] object-cover sm:h-full" alt="">
+                <div class="px-4 pb-4 flex flex-col gap-2">
+                    <h5 class="text-primary-text text-lg">Name of the product</h5>
+                    <p class="font-bold text-xl">Rs 1,500</p>
+                    <a href="cart.html"
+                        class="bg-green text-white px-4 py-2 text-center rounded font-semibold hover:bg-[#18B195] transition duration-200 hover:ease-in-out cursor-pointer">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="card cursor-pointer flex flex-col gap-2 border border-[#6B6B6B] pt-4 sm:pt-0">
+                <img src="./assets/images/3.png" class="w-full h-[15rem] object-cover sm:h-full" alt="">
+                <div class="px-4 pb-4 flex flex-col gap-2">
+                    <h5 class="text-primary-text text-lg">Name of the product</h5>
+                    <p class="font-bold text-xl">Rs 1,500</p>
+                    <a href="cart.html"
+                        class="bg-green text-white px-4 py-2 text-center rounded font-semibold hover:bg-[#18B195] transition duration-200 hover:ease-in-out cursor-pointer">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="card cursor-pointer flex flex-col gap-2 border border-[#6B6B6B] pt-4 sm:pt-0">
+                <img src="./assets/images/1.png" class="w-full h-[15rem] object-cover sm:h-full" alt="">
+                <div class="px-4 pb-4 flex flex-col gap-2">
+                    <h5 class="text-primary-text text-lg">Name of the product</h5>
+                    <p class="font-bold text-xl">Rs 1,500</p>
+                    <a href="cart.html"
+                        class="bg-green text-white px-4 py-2 text-center rounded font-semibold hover:bg-[#18B195] transition duration-200 hover:ease-in-out cursor-pointer">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="card cursor-pointer flex flex-col gap-2 border border-[#6B6B6B] pt-4 sm:pt-0">
+                <img src="./assets/images/3.png" class="w-full h-[15rem] object-cover sm:h-full" alt="">
+                <div class="px-4 pb-4 flex flex-col gap-2">
+                    <h5 class="text-primary-text text-lg">Name of the product</h5>
+                    <p class="font-bold text-xl">Rs 1,500</p>
+                    <a href="cart.html"
+                        class="bg-green text-white px-4 py-2 text-center rounded font-semibold hover:bg-[#18B195] transition duration-200 hover:ease-in-out cursor-pointer">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <a href="products.html" class="inline md:hidden underline text-primary-text font-semibold">See all (100+)</a>
+    </section>
     <!-- doctor section -->
     <section
         class="doctor py-10 px-6 sm:px-8 md:px-14 xl:px-24 flex flex-col gap-y-6 border-b-1 md:border-b-0 border-gray-300">
@@ -276,7 +366,8 @@
                     <span
                         class="bg-footer-blue mt-2 md:mt-0 ml-0 md:ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
                 </h2>
-                <a href="doctors.html" class="hidden md:inline underline text-primary-text font-semibold">See all (300+)</a>
+                <a href="doctors.html" class="hidden md:inline underline text-primary-text font-semibold">See all
+                    (300+)</a>
             </div>
             <p class="text-primary-text text-sm md:text-base">Connect with the most recommended primary care doctors –
                 chosen for their
@@ -465,7 +556,8 @@
             <h2 class="text-lg md:text-2xl font-semibold">Find a health clinic or hospital from over 1,000 options <span
                     class="bg-footer-blue ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
             </h2>
-            <a href="hospitals.html" class="underline text-primary-text font-semibold hidden md:inline">See all (100+)</a>
+            <a href="hospitals.html" class="underline text-primary-text font-semibold hidden md:inline">See all
+                (100+)</a>
         </div>
         <div class="clinic-card grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
             <div class="card border border-footer-blue flex items-center rounded-lg justify-center p-2 cursor-pointer">
@@ -500,7 +592,8 @@
                 <h2 class="text-lg md:text-2xl font-semibold">Choose a diagnostic lab from 1,000+ test services<span
                         class="bg-footer-blue ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
                 </h2>
-                <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+                <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all
+                    (100+)</a>
             </div>
             <p class="text-primary-text">Find certified diagnostic labs from over 1,000 trusted options, making it easy
                 to access reliable testing near you.</p>
@@ -578,7 +671,8 @@
                 <h2 class="text-lg md:text-2xl font-semibold">Find a Radiology Center from Over 50 Verified Options<span
                         class="bg-footer-blue ml-2 px-4 md:px-6 py-1 md:py-2 rounded-3xl text-white text-xs md:text-sm">Sponsored</span>
                 </h2>
-                <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+                <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all
+                    (100+)</a>
             </div>
             <p class="text-primary-text text-sm md:text-base">Easily locate trusted radiology centers from a network of
                 over 1,000 verified
@@ -654,7 +748,8 @@
         class="symptoms py-10 px-6 sm:px-8 md:px-14 xl:px-24 flex flex-col gap-y-6 border-b-1 md:border-b-0 border-gray-300">
         <div class="flex items-center justify-between">
             <h2 class="text-lg md:text-2xl font-semibold">Check your symptoms and get care right away.</h2>
-            <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+            <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all
+                (100+)</a>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             <div
@@ -706,7 +801,8 @@
     <section class="appointment py-10 px-6 sm:px-8 md:px-14 xl:px-24 flex flex-col gap-y-6 bg-[#e8f3f1]">
         <div class="flex items-center justify-between">
             <h2 class="text-lg md:text-2xl font-semibold">Book Hospital Appointment</h2>
-            <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all (100+)</a>
+            <a href="hospitals.html" class="hidden md:inline underline text-primary-text font-semibold">See all
+                (100+)</a>
         </div>
         <div class="owl-carousel hospital-card gap-4">
 
@@ -983,6 +1079,7 @@
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/hammenu.js"></script>
     <script src="./assets/js/stick.js"></script>
+
 </body>
 
 </html>
